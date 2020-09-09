@@ -151,7 +151,7 @@
     
     
     <span class="dot"></span>
-    <span>664 字</span>
+    <span>663 字</span>
     
   </div>
   
@@ -173,16 +173,107 @@
   </header>
   <div id="section" class="post-content">
     <h2 id="各种排序算法总结"><a href="#各种排序算法总结" class="headerlink" title="各种排序算法总结"></a>各种排序算法总结</h2><p>本文主要是为了总结各种算法的写法，复杂度，以及稳定性分析，主要是个人做个记录，如果有任何需要修改或优化的地方欢迎在评论区留言哦！</p>
-<h3 id="排序算法时间、空间、稳定性表"><a href="#排序算法时间、空间、稳定性表" class="headerlink" title="排序算法时间、空间、稳定性表"></a>排序算法时间、空间、稳定性表</h3><p>|   算法  |   最好  |  最坏   |  平均   |  空间   |  稳定性 |<br>| — | — | — | — | — | :—: | :—: |<br>|  冒泡排序  |  O(n)   |   O(n<sup>2</sup>)  |  O(n<sup>2</sup>)   |  O(1)   | 稳定  |<br>|  选择排序  |  O(n<sup>2</sup>)  |   O(n<sup>2</sup>)  |  O(n<sup>2</sup>)   |  O(1)  | 不稳定 |<br>|  插入排序  |  O(n)   |   O(n<sup>2</sup>)  |  O(n<sup>2</sup>)   |  O(1)   | 稳定  |<br>|  快速排序  |  O(nlog n)   |  O(n<sup>2</sup>)   |  O(nlog n)   |  O(\log n)<del>O(n)   | 不稳定 |<br>|  归并排序  |  O(nlog n)   |   O(nlog n)  |  O(nlog n)   |   O(n)  |  稳定   |<br>|  希尔排序  |  O(n<sup>1.3</sup>)   |   O(n<sup>2</sup>)  |  O(nlog n)</del>O(n<sup>2</sup>)   |  O(1)   | 不稳定    |<br>|  计数排序  |  O(n+k)   |   O(n+k)  |   O(n+k)  |  O(n+k)   |  稳定   |<br>|  基数排序  |   O(nk)  |  O(nk)   |   O(nk)  |   O(n+k)  |  稳定   |<br>|  桶排序    |   O(n)  |   O(n)  |   O(n)  |  O(n+m)   |  稳定   |<br>|  堆排序    |  O(nlog n)   |   O(nlog n)  |  O(nlog n)   |   O(1)  |  不稳定   |</p>
+<h3 id="排序算法时间、空间、稳定性表"><a href="#排序算法时间、空间、稳定性表" class="headerlink" title="排序算法时间、空间、稳定性表"></a>排序算法时间、空间、稳定性表</h3><table>
+<thead>
+<tr>
+<th>算法</th>
+<th>最好</th>
+<th>最坏</th>
+<th>平均</th>
+<th>空间</th>
+<th align="center">稳定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>冒泡排序</td>
+<td>O(n)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(1)</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td>选择排序</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(1)</td>
+<td align="center">不稳定</td>
+</tr>
+<tr>
+<td>插入排序</td>
+<td>O(n)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(1)</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>O(nlog n)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(nlog n)</td>
+<td>O(log n)-O(n)</td>
+<td align="center">不稳定</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td>O(nlog n)</td>
+<td>O(nlog n)</td>
+<td>O(nlog n)</td>
+<td>O(n)</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td>O(n^1.3)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(nlog n)-O(n<sup>2</sup>)</td>
+<td>O(1)</td>
+<td align="center">不稳定</td>
+</tr>
+<tr>
+<td>计数排序</td>
+<td>O(n+k)</td>
+<td>O(n+k)</td>
+<td>O(n+k)</td>
+<td>O(n+k)</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td>O(nk)</td>
+<td>O(nk)</td>
+<td>O(nk)</td>
+<td>O(n+k)</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td>桶排序</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(n+m)</td>
+<td align="center">稳定</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>O(nlog n)</td>
+<td>O(nlog n)</td>
+<td>O(nlog n)</td>
+<td>O(1)</td>
+<td align="center">不稳定</td>
+</tr>
+</tbody></table>
 <p>注：稳定性是指：假定在待排序的记录序列中，存在多个具有<strong>相同的关键字</strong>的记录，若经过排序，这些记录的<strong>相对次序</strong>保持不变，即在原序列中，ri=rj，且ri在rj之前，而在排序后的序列中，ri仍在rj之前，则称这种排序算法是稳定的；否则称为不稳定的。</p>
 <h2 id="冒泡排序-Bubble-Sort"><a href="#冒泡排序-Bubble-Sort" class="headerlink" title="冒泡排序 Bubble Sort"></a>冒泡排序 Bubble Sort</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>作为本人踏入算法殿堂学习的第一个排序算法，冒泡排序可以算是经典算法之一了，它的基本思想是：**<em><u>两个数比较大小，较大的数下沉，较小的数冒起来</u>**</em>。</p>
-<h3 id="Python-算法实现"><a href="#Python-算法实现" class="headerlink" title="Python 算法实现"></a>Python 算法实现</h3><pre class="highlight"><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble</span>(<span class="params">array</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(array)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(array)-i<span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> array[j] &gt; array[j+<span class="number">1</span>]:  <span class="comment">#判断大小，大的排在后面</span></span><br><span class="line">                array[j], array[j+<span class="number">1</span>] = array[j+<span class="number">1</span>], array[j]</span><br><span class="line">    <span class="keyword">return</span> array</span><br></pre>
+<h3 id="Python-算法实现"><a href="#Python-算法实现" class="headerlink" title="Python 算法实现"></a>Python 算法实现</h3><pre class="highlight"><code class="hljs Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bubble</span>(<span class="hljs-params">array</span>):</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(array)):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(len(array)-i<span class="hljs-number">-1</span>):<br>            <span class="hljs-keyword">if</span> array[j] &gt; array[j+<span class="hljs-number">1</span>]:  <span class="hljs-comment">#判断大小，大的排在后面</span><br>                array[j], array[j+<span class="hljs-number">1</span>] = array[j+<span class="hljs-number">1</span>], array[j]<br>    <span class="hljs-keyword">return</span> array<br></code></pre>
 
 <h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>平均时间复杂度 O(n<sup>2</sup>)</p>
 <h2 id="选择排序-Selection-Sort"><a href="#选择排序-Selection-Sort" class="headerlink" title="选择排序 Selection Sort"></a>选择排序 Selection Sort</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p>在长度为n的无序数组中，第一次遍历n-1个数，找到最小的数值与第一个元素交换；<br>第二次遍历n-2个数，找到最小的数值与第二个元素交换；<br>。。。<br>第n-1次遍历，找到最小的数值与第n-1个元素交换，排序完成。</p>
-<h3 id="Python-算法实现-1"><a href="#Python-算法实现-1" class="headerlink" title="Python 算法实现"></a>Python 算法实现</h3><pre class="highlight"><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">selection</span>(<span class="params">array</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(array)):</span><br><span class="line">        low = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>, len(array)):</span><br><span class="line">            <span class="keyword">if</span> array[j] &lt; array[low]:</span><br><span class="line">                low = j</span><br><span class="line">        array[i], array[low] = array[low], array[i]</span><br><span class="line">    <span class="keyword">return</span> array</span><br></pre>
+<h3 id="Python-算法实现-1"><a href="#Python-算法实现-1" class="headerlink" title="Python 算法实现"></a>Python 算法实现</h3><pre class="highlight"><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selection</span>(<span class="hljs-params">array</span>):</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(array)):<br>        low = i<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i+<span class="hljs-number">1</span>, len(array)):<br>            <span class="hljs-keyword">if</span> array[j] &lt; array[low]:<br>                low = j<br>        array[i], array[low] = array[low], array[i]<br>    <span class="hljs-keyword">return</span> array<br></code></pre>
 
-<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>平均时间复杂度 O(n<sup>2</sup>)</p>
+<h3 id="复杂度-1"><a href="#复杂度-1" class="headerlink" title="复杂度"></a>复杂度</h3><p>平均时间复杂度 O(n<sup>2</sup>)</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/sort-algorithm-summary.html">排序算法总结 | 菜鸟教程</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012501054/article/details/79342580">排序算法的稳定性及其意义_u012501054的博客-CSDN博客</a></p>
 
@@ -250,7 +341,7 @@
 
 <div class="card card-content toc-card" id="mobiletoc">
   <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93"><span class="toc-text">各种排序算法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E3%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%A1%A8"><span class="toc-text">排序算法时间、空间、稳定性表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-text">冒泡排序 Bubble Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-Selection-Sort"><span class="toc-text">选择排序 Selection Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">时间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93"><span class="toc-text">各种排序算法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E3%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%A1%A8"><span class="toc-text">排序算法时间、空间、稳定性表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-text">冒泡排序 Bubble Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-Selection-Sort"><span class="toc-text">选择排序 Selection Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6-1"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
 </div></main>
           <aside class="left-column">
             
@@ -299,7 +390,7 @@
   <article class="display-when-two-columns spacer">
     <div class="card card-content toc-card">
       <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93"><span class="toc-text">各种排序算法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E3%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%A1%A8"><span class="toc-text">排序算法时间、空间、稳定性表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-text">冒泡排序 Bubble Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-Selection-Sort"><span class="toc-text">选择排序 Selection Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">时间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93"><span class="toc-text">各种排序算法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E3%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%A1%A8"><span class="toc-text">排序算法时间、空间、稳定性表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-text">冒泡排序 Bubble Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-Selection-Sort"><span class="toc-text">选择排序 Selection Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6-1"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
     </div>
   </article>
   
@@ -351,7 +442,7 @@
   
   <article class="card card-content toc-card">
     <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93"><span class="toc-text">各种排序算法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E3%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%A1%A8"><span class="toc-text">排序算法时间、空间、稳定性表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-text">冒泡排序 Bubble Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-Selection-Sort"><span class="toc-text">选择排序 Selection Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">时间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93"><span class="toc-text">各种排序算法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E3%80%81%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%A1%A8"><span class="toc-text">排序算法时间、空间、稳定性表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-text">冒泡排序 Bubble Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-Selection-Sort"><span class="toc-text">选择排序 Selection Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">Python 算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6-1"><span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
   </article>
   
   
