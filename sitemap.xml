@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.haomingzhang.com/guestbook/index.html</loc>
+    
+    <lastmod>2020-09-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.haomingzhang.com/2020/09/13/hexo_1/</loc>
+    
+    <lastmod>2020-09-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.haomingzhang.com/2020/09/08/sorting_algorithms/</loc>
     
     <lastmod>2020-09-10</lastmod>
@@ -26,6 +40,13 @@
   
   <url>
     <loc>http://www.haomingzhang.com/tags/%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2020-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haomingzhang.com/tags/Hexo/</loc>
     <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
