@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.haomingzhang.com/2020/09/08/sorting_algorithms/</loc>
+    <loc>http://www.haomingzhang.com/2020/09/08/sorting_algorithms/</loc>
     
     <lastmod>2020-09-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.haomingzhang.com/2020/09/06/welcome/</loc>
+    <loc>http://www.haomingzhang.com/2020/09/06/welcome/</loc>
     
     <lastmod>2020-09-10</lastmod>
     
@@ -17,30 +17,30 @@
   
 
   <url>
-    <loc>https://www.haomingzhang.com/</loc>
-    <lastmod>2020-09-11</lastmod>
+    <loc>http://www.haomingzhang.com/</loc>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.haomingzhang.com/tags/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2020-09-11</lastmod>
+    <loc>http://www.haomingzhang.com/tags/%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.haomingzhang.com/tags/%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2020-09-11</lastmod>
+    <loc>http://www.haomingzhang.com/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.haomingzhang.com/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-09-11</lastmod>
+    <loc>http://www.haomingzhang.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -48,15 +48,15 @@
 
   
   <url>
-    <loc>https://www.haomingzhang.com/categories/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2020-09-11</lastmod>
+    <loc>http://www.haomingzhang.com/categories/%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.haomingzhang.com/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-09-11</lastmod>
+    <loc>http://www.haomingzhang.com/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

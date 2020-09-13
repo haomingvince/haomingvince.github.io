@@ -1,2 +1,2 @@
-https://www.haomingzhang.com/2020/09/08/sorting_algorithms/
-https://www.haomingzhang.com/2020/09/06/welcome/
+http://www.haomingzhang.com/2020/09/08/sorting_algorithms/
+http://www.haomingzhang.com/2020/09/06/welcome/
