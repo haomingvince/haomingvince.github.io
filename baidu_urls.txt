@@ -1,4 +1,4 @@
-http://www.haomingzhang.com/hexo_2/
-http://www.haomingzhang.com/hexo_1/
-http://www.haomingzhang.com/sorting_algorithms/
-http://www.haomingzhang.com/welcome/
+https://www.haomingzhang.com/hexo_2/
+https://www.haomingzhang.com/hexo_1/
+https://www.haomingzhang.com/sorting_algorithms/
+https://www.haomingzhang.com/welcome/
