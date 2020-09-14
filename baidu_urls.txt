@@ -1,4 +1,4 @@
-http://www.haomingzhang.com/2020/09/13/hexo_2/
-http://www.haomingzhang.com/2020/09/13/hexo_1/
-http://www.haomingzhang.com/2020/09/08/sorting_algorithms/
-http://www.haomingzhang.com/2020/09/06/welcome/
+http://www.haomingzhang.com/hexo_2/
+http://www.haomingzhang.com/hexo_1/
+http://www.haomingzhang.com/sorting_algorithms/
+http://www.haomingzhang.com/welcome/
