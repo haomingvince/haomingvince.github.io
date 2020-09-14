@@ -73,6 +73,75 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo主题安装以及next8.0主题美化</title>
+    <url>/hexo_2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>配置完了hexo，你是否对自带的主题不满意呢？本篇文章将教你如何更改及美化hexo主题。<br>如果你还有没有安装hexo，请移步我的<a href="https://haomingzhang.com/hexo_1/">上一篇文章</a>。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>可以通过右边的文章目录快速跳转哦！</p>
+</blockquote>
+<h1 id="hexo主题推荐"><a href="#hexo主题推荐" class="headerlink" title="hexo主题推荐"></a>hexo主题推荐</h1><h2 id="hexo-next"><a href="#hexo-next" class="headerlink" title="hexo next"></a>hexo next</h2><p><a href="https://github.com/next-theme/hexo-theme-next">hexo-theme-next</a>应该是目前最广泛使用的hexo主题了，优点是简洁，定制度高，因为代码是开源的，所以有很多开发者维护。由于前任管理员不提供权限，故开发了一个新的分支，<a href="https://github.com/next-theme/hexo-theme-next/issues/4#issuecomment-626205848">详情</a>。最新版本为8.0也是我在使用的版本，8.0及前版本请使用github搜索功能。<br><img src="https://user-images.githubusercontent.com/16272760/83972923-98baae80-a915-11ea-8142-3cf875dad8bf.png"></p>
+<h2 id="hexo-kaze"><a href="#hexo-kaze" class="headerlink" title="hexo kaze"></a>hexo kaze</h2><p><a href="https://github.com/theme-kaze/hexo-theme-kaze">hexo-theme-kaze</a>是我在<a href="https://hexo.io/themes/">Themes|Hexo</a>里面找到的一款很漂亮的主题，支持黑、白两种模式，界面简洁。<br><img src="https://camo.githubusercontent.com/7fcf6c7d79e5cac6df102ff704e3ce05d3913e4e/68747470733a2f2f696d672e736f6e67686e2e636f6d2f696d672f67616c6c6572792e706e673f696d616765736c696d"></p>
+<h1 id="hexo-next主题安装及美化"><a href="#hexo-next主题安装及美化" class="headerlink" title="hexo next主题安装及美化"></a>hexo next主题安装及美化</h1><h2 id="更改基本站点信息"><a href="#更改基本站点信息" class="headerlink" title="更改基本站点信息"></a>更改基本站点信息</h2><p>在你的博客根目录下打开 _config.yml<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png"></p>
+<p>在site栏目下可以更改你的基本站点信息</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Vince&#x27;s</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;Vince的博客&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Vince</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>同时，记得把网站url改成自己的站点名</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">http://www.haomingzhang.com</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装hexo-next主题"><a href="#安装hexo-next主题" class="headerlink" title="安装hexo next主题"></a>安装hexo next主题</h2><p>如果你正在使用hexo 5.0及以上版本，可以使用以下命令安装：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
+
+<p>或者使用git submodule克隆到本地（我在使用的方法，下文也会使用此方法的路径，npm安装的主题路径在node_modules里，其他操作不变。使用submodule是为了更好的版本控制。）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ git submodule add https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<h2 id="切换到next主题"><a href="#切换到next主题" class="headerlink" title="切换到next主题"></a>切换到next主题</h2><p>在你的博客根目录下打开 _config.yml<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png"></p>
+<p>搜索themes，将里面的值改为next</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置next主题"><a href="#配置next主题" class="headerlink" title="配置next主题"></a>配置next主题</h2><p>将 themes/next/_config.yml复制到你的博客根目录，重命名为_config.next.yml，linux可以使用以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ cp themes/next/_config.yml _config.next.yml</span><br></pre></td></tr></table></figure>
+
+<h3 id="选择Schemes"><a href="#选择Schemes" class="headerlink" title="选择Schemes"></a>选择Schemes</h3><p>打开 _config.next.yml，首先可以看到 Scheme Settings，里面提供了四种模式，对应上面介绍next的图片的四种，我用的是muse主题，可以根据自己的喜好更改。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="设置站点icon"><a href="#设置站点icon" class="headerlink" title="设置站点icon"></a>设置站点icon</h3><p>在favicon中，可以设置侧边栏头像以及站点icon。需要把你的icon放在 source/img/目录下</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">    <span class="attr">small:</span> <span class="string">/img/avatar.jfif</span></span><br><span class="line">    <span class="attr">medium:</span> <span class="string">/img/avatar.jfif</span></span><br><span class="line">    <span class="attr">apple_touch_icon:</span> <span class="string">/img/avatar.jfif</span></span><br><span class="line">    <span class="attr">safari_pinned_tab:</span> <span class="string">/images/logo.svg</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="设置菜单栏"><a href="#设置菜单栏" class="headerlink" title="设置菜单栏"></a>设置菜单栏</h3><p>在menu下，可以设置菜单显示内容，此版本next支持font awesome图标，可以去<a href="https://fontawesome.com/">官网</a>寻找你喜欢的图标进行替换。注：相应的菜单栏需要有对应的页面才能打开，不然会404哦！</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">    <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">    <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">    <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">    <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">    <span class="attr">guestbook:</span> <span class="string">/guestbook/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-book</span></span><br><span class="line">    <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">    <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">    <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="开启tags-categories-留言板栏"><a href="#开启tags-categories-留言板栏" class="headerlink" title="开启tags/categories/留言板栏"></a>开启tags/categories/留言板栏</h3><p>举个栗子，开启tags：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>此时在你的 source/ 文件夹下会出现一个对应的tags文件夹，打开index.md并编辑为：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-09-06 19:36:01</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">sitemap:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>即可开启tags，categories也是一样的操作，type改为categories即可。对于留言板来说，只需要将comments一栏改为true，type改为guestbook即可。</p>
+<h3 id="边栏设置"><a href="#边栏设置" class="headerlink" title="边栏设置"></a>边栏设置</h3><p>在sidebar选项下，有多个自定义选项，可以自行查看。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#调整边栏左右</span></span><br><span class="line"><span class="comment">#position: left</span></span><br><span class="line"><span class="attr">position:</span> <span class="string">right</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Display (only for Muse | Mist), available values:</span></span><br><span class="line"><span class="comment">#  - post    expand on posts automatically. Default.</span></span><br><span class="line"><span class="comment">#  - always  expand for all pages automatically.</span></span><br><span class="line"><span class="comment">#  - hide    expand only when click on the sidebar toggle icon.</span></span><br><span class="line"><span class="comment">#  - remove  totally remove sidebar including sidebar toggle.</span></span><br><span class="line"><span class="attr">display:</span> <span class="string">post</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar padding in pixels.</span></span><br><span class="line"><span class="attr">padding:</span> <span class="number">18</span></span><br><span class="line"><span class="comment"># Sidebar offset from top menubar in pixels (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">offset:</span> <span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="添加社交帐号"><a href="#添加社交帐号" class="headerlink" title="添加社交帐号"></a>添加社交帐号</h3><p>在social栏目下，可以自定义在边栏显示的社交帐号，可以根据需求自行添加。注：此处依然使用font awsome的图标，可以自行修改。</p>
+<h3 id="设置回到开头"><a href="#设置回到开头" class="headerlink" title="设置回到开头"></a>设置回到开头</h3><p>将back2top的enable设置为true即可，边栏和滚动百分比可以按照需求自行添加。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">back2top:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Back to top in sidebar.</span></span><br><span class="line">    <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line">    <span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="设置已读进度条"><a href="#设置已读进度条" class="headerlink" title="设置已读进度条"></a>设置已读进度条</h3><p>将reading_progress的enable设置为true即可，位置颜色和高度都可以调整。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Reading progress bar</span></span><br><span class="line"><span class="attr">reading_progress:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: top | bottom</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">bottom</span></span><br><span class="line">    <span class="attr">color:</span> <span class="string">&quot;#37c6c0&quot;</span></span><br><span class="line">    <span class="attr">height:</span> <span class="string">3px</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>到此，你已经实现了基本的next安装及配置，是不是好看了很多呢？如果你还是对设置有疑惑，可以参考我reference中我的页面设置。</p>
+<h2 id="Upcoming-Next"><a href="#Upcoming-Next" class="headerlink" title="Upcoming Next"></a>Upcoming Next</h2><p>下一篇文章中，我会介绍一些我使用的插件。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>各种排序算法总结</title>
     <url>/sorting_algorithms/</url>
     <content><![CDATA[<h2 id="各种排序算法总结"><a href="#各种排序算法总结" class="headerlink" title="各种排序算法总结"></a>各种排序算法总结</h2><p>本文主要是为了总结各种算法的写法，复杂度，以及稳定性分析，主要是个人做个记录，如果有任何需要修改或优化的地方欢迎在评论区留言哦！</p>
@@ -280,75 +349,6 @@
       </categories>
       <tags>
         <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo主题安装以及next8.0主题美化</title>
-    <url>/hexo_2/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>配置完了hexo，你是否对自带的主题不满意呢？本篇文章将教你如何更改及美化hexo主题。<br>如果你还有没有安装hexo，请移步我的<a href="https://haomingzhang.com/hexo_1/">上一篇文章</a>。</p>
-<a id="more"></a>
-
-<blockquote>
-<p>可以通过右边的文章目录快速跳转哦！</p>
-</blockquote>
-<h1 id="hexo主题推荐"><a href="#hexo主题推荐" class="headerlink" title="hexo主题推荐"></a>hexo主题推荐</h1><h2 id="hexo-next"><a href="#hexo-next" class="headerlink" title="hexo next"></a>hexo next</h2><p><a href="https://github.com/next-theme/hexo-theme-next">hexo-theme-next</a>应该是目前最广泛使用的hexo主题了，优点是简洁，定制度高，因为代码是开源的，所以有很多开发者维护。由于前任管理员不提供权限，故开发了一个新的分支，<a href="https://github.com/next-theme/hexo-theme-next/issues/4#issuecomment-626205848">详情</a>。最新版本为8.0也是我在使用的版本，8.0及前版本请使用github搜索功能。<br><img src="https://user-images.githubusercontent.com/16272760/83972923-98baae80-a915-11ea-8142-3cf875dad8bf.png"></p>
-<h2 id="hexo-kaze"><a href="#hexo-kaze" class="headerlink" title="hexo kaze"></a>hexo kaze</h2><p><a href="https://github.com/theme-kaze/hexo-theme-kaze">hexo-theme-kaze</a>是我在<a href="https://hexo.io/themes/">Themes|Hexo</a>里面找到的一款很漂亮的主题，支持黑、白两种模式，界面简洁。<br><img src="https://camo.githubusercontent.com/7fcf6c7d79e5cac6df102ff704e3ce05d3913e4e/68747470733a2f2f696d672e736f6e67686e2e636f6d2f696d672f67616c6c6572792e706e673f696d616765736c696d"></p>
-<h1 id="hexo-next主题安装及美化"><a href="#hexo-next主题安装及美化" class="headerlink" title="hexo next主题安装及美化"></a>hexo next主题安装及美化</h1><h2 id="更改基本站点信息"><a href="#更改基本站点信息" class="headerlink" title="更改基本站点信息"></a>更改基本站点信息</h2><p>在你的博客根目录下打开 _config.yml<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png"></p>
-<p>在site栏目下可以更改你的基本站点信息</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Vince&#x27;s</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;Vince的博客&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Vince</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>同时，记得把网站url改成自己的站点名</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">http://www.haomingzhang.com</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="安装hexo-next主题"><a href="#安装hexo-next主题" class="headerlink" title="安装hexo next主题"></a>安装hexo next主题</h2><p>如果你正在使用hexo 5.0及以上版本，可以使用以下命令安装：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
-
-<p>或者使用git submodule克隆到本地（我在使用的方法，下文也会使用此方法的路径，npm安装的主题路径在node_modules里，其他操作不变。使用submodule是为了更好的版本控制。）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ git submodule add https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<h2 id="切换到next主题"><a href="#切换到next主题" class="headerlink" title="切换到next主题"></a>切换到next主题</h2><p>在你的博客根目录下打开 _config.yml<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png"></p>
-<p>搜索themes，将里面的值改为next</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="配置next主题"><a href="#配置next主题" class="headerlink" title="配置next主题"></a>配置next主题</h2><p>将 themes/next/_config.yml复制到你的博客根目录，重命名为_config.next.yml，linux可以使用以下命令：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ cp themes/next/_config.yml _config.next.yml</span><br></pre></td></tr></table></figure>
-
-<h3 id="选择Schemes"><a href="#选择Schemes" class="headerlink" title="选择Schemes"></a>选择Schemes</h3><p>打开 _config.next.yml，首先可以看到 Scheme Settings，里面提供了四种模式，对应上面介绍next的图片的四种，我用的是muse主题，可以根据自己的喜好更改。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="设置站点icon"><a href="#设置站点icon" class="headerlink" title="设置站点icon"></a>设置站点icon</h3><p>在favicon中，可以设置侧边栏头像以及站点icon。需要把你的icon放在 source/img/目录下</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">    <span class="attr">small:</span> <span class="string">/img/avatar.jfif</span></span><br><span class="line">    <span class="attr">medium:</span> <span class="string">/img/avatar.jfif</span></span><br><span class="line">    <span class="attr">apple_touch_icon:</span> <span class="string">/img/avatar.jfif</span></span><br><span class="line">    <span class="attr">safari_pinned_tab:</span> <span class="string">/images/logo.svg</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="设置菜单栏"><a href="#设置菜单栏" class="headerlink" title="设置菜单栏"></a>设置菜单栏</h3><p>在menu下，可以设置菜单显示内容，此版本next支持font awesome图标，可以去<a href="https://fontawesome.com/">官网</a>寻找你喜欢的图标进行替换。注：相应的菜单栏需要有对应的页面才能打开，不然会404哦！</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">    <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">    <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">    <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">    <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">    <span class="attr">guestbook:</span> <span class="string">/guestbook/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-book</span></span><br><span class="line">    <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">    <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">    <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="开启tags-categories-留言板栏"><a href="#开启tags-categories-留言板栏" class="headerlink" title="开启tags/categories/留言板栏"></a>开启tags/categories/留言板栏</h3><p>举个栗子，开启tags：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your_site_dir</span><br><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
-
-<p>此时在你的 source/ 文件夹下会出现一个对应的tags文件夹，打开index.md并编辑为：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-09-06 19:36:01</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">sitemap:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<p>即可开启tags，categories也是一样的操作，type改为categories即可。对于留言板来说，只需要将comments一栏改为true，type改为guestbook即可。</p>
-<h3 id="边栏设置"><a href="#边栏设置" class="headerlink" title="边栏设置"></a>边栏设置</h3><p>在sidebar选项下，有多个自定义选项，可以自行查看。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#调整边栏左右</span></span><br><span class="line"><span class="comment">#position: left</span></span><br><span class="line"><span class="attr">position:</span> <span class="string">right</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Display (only for Muse | Mist), available values:</span></span><br><span class="line"><span class="comment">#  - post    expand on posts automatically. Default.</span></span><br><span class="line"><span class="comment">#  - always  expand for all pages automatically.</span></span><br><span class="line"><span class="comment">#  - hide    expand only when click on the sidebar toggle icon.</span></span><br><span class="line"><span class="comment">#  - remove  totally remove sidebar including sidebar toggle.</span></span><br><span class="line"><span class="attr">display:</span> <span class="string">post</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar padding in pixels.</span></span><br><span class="line"><span class="attr">padding:</span> <span class="number">18</span></span><br><span class="line"><span class="comment"># Sidebar offset from top menubar in pixels (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">offset:</span> <span class="number">12</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="添加社交帐号"><a href="#添加社交帐号" class="headerlink" title="添加社交帐号"></a>添加社交帐号</h3><p>在social栏目下，可以自定义在边栏显示的社交帐号，可以根据需求自行添加。注：此处依然使用font awsome的图标，可以自行修改。</p>
-<h3 id="设置回到开头"><a href="#设置回到开头" class="headerlink" title="设置回到开头"></a>设置回到开头</h3><p>将back2top的enable设置为true即可，边栏和滚动百分比可以按照需求自行添加。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">back2top:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Back to top in sidebar.</span></span><br><span class="line">    <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line">    <span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="设置已读进度条"><a href="#设置已读进度条" class="headerlink" title="设置已读进度条"></a>设置已读进度条</h3><p>将reading_progress的enable设置为true即可，位置颜色和高度都可以调整。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Reading progress bar</span></span><br><span class="line"><span class="attr">reading_progress:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: top | bottom</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">bottom</span></span><br><span class="line">    <span class="attr">color:</span> <span class="string">&quot;#37c6c0&quot;</span></span><br><span class="line">    <span class="attr">height:</span> <span class="string">3px</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>到此，你已经实现了基本的next安装及配置，是不是好看了很多呢？如果你还是对设置有疑惑，可以参考我reference中我的页面设置。</p>
-<h2 id="Upcoming-Next"><a href="#Upcoming-Next" class="headerlink" title="Upcoming Next"></a>Upcoming Next</h2><p>下一篇文章中，我会介绍一些我使用的插件。</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
