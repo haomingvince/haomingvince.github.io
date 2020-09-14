@@ -2,14 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.haomingzhang.com/guestbook/index.html</loc>
+    <loc>http://www.haomingzhang.com/2020/09/13/hexo_2/</loc>
     
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.haomingzhang.com/2020/09/13/hexo_1/</loc>
+    
+    <lastmod>2020-09-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.haomingzhang.com/guestbook/index.html</loc>
     
     <lastmod>2020-09-13</lastmod>
     
@@ -32,7 +39,7 @@
 
   <url>
     <loc>http://www.haomingzhang.com/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -40,28 +47,28 @@
   
   <url>
     <loc>http://www.haomingzhang.com/tags/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.haomingzhang.com/tags/Hexo/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.haomingzhang.com/tags/%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.haomingzhang.com/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -70,14 +77,14 @@
   
   <url>
     <loc>http://www.haomingzhang.com/categories/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.haomingzhang.com/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
