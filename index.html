@@ -224,7 +224,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -283,6 +283,137 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.haomingzhang.com/hexo_3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn/avatar.jpg">
+      <meta itemprop="name" content="Vince">
+      <meta itemprop="description" content="Vince的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vince's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/hexo_3/" class="post-title-link" itemprop="url">为hexo next8.0主题添加一个可以切换的黑色/夜间模式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-09-16 20:58:30 / 修改时间：21:42:07" itemprop="dateCreated datePublished" datetime="2020-09-16T20:58:30-07:00">2020-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">记录</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/hexo_3/" class="post-meta-item leancloud_visitors" data-flag-title="为hexo next8.0主题添加一个可以切换的黑色/夜间模式" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/hexo_3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/hexo_3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">darkmode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑/白模式。如果你还没有自己的博客，可以参考我的前两篇文章：<a target="_blank" rel="noopener" href="https://haomingzhang.com/hexo_1/">hexo基本安装及配置</a>，<a target="_blank" rel="noopener" href="https://haomingzhang.com/hexo_2/">hexo主题安装以及next8.0主题美化</a>。</p>
+<h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><h2 id="1-添加darkmode-js到你的next主题中"><a href="#1-添加darkmode-js到你的next主题中" class="headerlink" title="1. 添加darkmode.js到你的next主题中"></a>1. 添加darkmode.js到你的next主题中</h2><p>你可以下载 <a target="_blank" rel="noopener" href="https://github.com/sandoche/Darkmode.js">Darkmode.js</a> 或者直接添加他的cdn到你的vendors文件。（注：next8.0之前的版本没有接下来所提到的需要的文件，可以参考<a target="_blank" rel="noopener" href="https://dog.wtf/tech/hexo-dark-mode-note/">这篇文章</a>来配置你的黑色模式）</p>
+<p>我的方法是直接在 themes/next/_vendors.yml 中添加 darkmode的 cdn：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">darkmode-js</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">1.5</span><span class="number">.7</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">lib/darkmode-js.min.js</span></span><br></pre></td></tr></table></figure>
+<p>直接加在文件末尾即可。</p>
+<h2 id="2-在你的-config-next-yml-添加darkmode-js的相关开关："><a href="#2-在你的-config-next-yml-添加darkmode-js的相关开关：" class="headerlink" title="2. 在你的 _config.next.yml 添加darkmode_js的相关开关："></a>2. 在你的 _config.next.yml 添加darkmode_js的相关开关：</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="comment">#darkmode_js: https://cdn.jsdelivr.net/npm/darkmode-js/lib/darkmode-js.min.js</span></span><br><span class="line">  <span class="attr">darkmode_js:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span> </span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>注意缩进！第一个darkmode_js是在vendors栏目下，第二个darkmode_js是一个单独的栏目。</p>
+<h2 id="3-开启darkmode-js"><a href="#3-开启darkmode-js" class="headerlink" title="3. 开启darkmode_js"></a>3. 开启darkmode_js</h2><p>打开 themes/next/layout/_scripts/vendors.njk，配置以下代码：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">%-</span> <span class="string">if</span> <span class="string">theme.canvas_ribbon.enable</span> <span class="string">%</span>&#125;</span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">size=&quot;&#123;&#123;</span> <span class="string">theme.canvas_ribbon.size</span> <span class="string">&#125;&#125;&quot;</span> <span class="string">alpha=&quot;&#123;&#123;</span> <span class="string">theme.canvas_ribbon.alpha</span> <span class="string">&#125;&#125;&quot;</span> <span class="string">zIndex=&quot;&#123;&#123;</span> <span class="string">theme.canvas_ribbon.zIndex</span> <span class="string">&#125;&#125;&quot;</span> <span class="string">src=&quot;&#123;&#123;</span> <span class="string">theme.vendors.canvas_ribbon</span> <span class="string">&#125;&#125;&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">&#123;<span class="string">%-</span> <span class="string">endif</span> <span class="string">%</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="comment"># Customize darkmode.js - Declaration #&#125;</span></span><br><span class="line">&#123;<span class="string">%-</span> <span class="string">if</span> <span class="string">theme.darkmode_js.enable</span> <span class="string">%</span>&#125;</span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">src=&quot;<span class="template-variable">&#123;&#123; theme.vendors.darkmode_js &#125;&#125;</span></span><span class="string">&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%- endif %&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#123;%- for name in js_vendors() %&#125;</span></span><br><span class="line"><span class="string">  &lt;script src=&quot;</span>&#123;&#123; <span class="string">url_for(theme.vendors</span>[<span class="string">name</span>]<span class="string">)</span> &#125;&#125;<span class="string">&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%- endfor %&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#123;# Customize darkmode.js - Invokation #&#125;</span></span><br><span class="line"><span class="string">&#123;%- if theme.darkmode_js.enable %&#125;</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">var options = &#123;</span></span><br><span class="line"><span class="string">  bottom: &#x27;64px&#x27;, // default: &#x27;32px&#x27;</span></span><br><span class="line"><span class="string">  right: &#x27;unset&#x27;, // default: &#x27;32px&#x27;</span></span><br><span class="line"><span class="string">  left: &#x27;32px&#x27;, // default: &#x27;unset&#x27;</span></span><br><span class="line"><span class="string">  time: &#x27;0.5s&#x27;, // default: &#x27;0.3s&#x27;</span></span><br><span class="line"><span class="string">  mixColor: &#x27;#fff&#x27;, // default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="string">  backgroundColor: &#x27;#fff&#x27;,  // default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="string">  buttonColorDark: &#x27;#100f2c&#x27;,  // default: &#x27;#100f2c&#x27;</span></span><br><span class="line"><span class="string">  buttonColorLight: &#x27;#fff&#x27;, // default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="string">  saveInCookies: true, // default: true,</span></span><br><span class="line"><span class="string">  label: &#x27;🌓&#x27;, // default: &#x27;&#x27;</span></span><br><span class="line"><span class="string">  autoMatchOsTheme: true // default: true</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">const darkmode = new Darkmode(options);</span></span><br><span class="line"><span class="string">darkmode.showWidget();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>因为此版本的动画特效已经精简为只有canvas_ribbon，更改后的配置文件就如上所示，其他可以根据情况自行更改。</p>
+<h2 id="4-重新生成即可开启，点击按钮即可切换黑白模式"><a href="#4-重新生成即可开启，点击按钮即可切换黑白模式" class="headerlink" title="4. 重新生成即可开启，点击按钮即可切换黑白模式"></a>4. 重新生成即可开启，点击按钮即可切换黑白模式</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>因为next团队在8.0版本更改了比较多的代码，网上既有的教程并不适用于8.0版本，如果有这个按钮需要的话，可以按照本文配置哦！可以参考我的配置（Reference栏）来进行修改，如果有任何问题欢迎留言。</p>
+<p>最后效果<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif"></p>
+<h2 id="Upcoming-next"><a href="#Upcoming-next" class="headerlink" title="Upcoming next"></a>Upcoming next</h2><p>为你的博客添加留言板功能</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/sandoche/Darkmode.js">sandoche/Darkmode.js: 🌓 Add a dark-mode / night-mode to your website in a few seconds</a></p>
+<p><a target="_blank" rel="noopener" href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode (暗色背景 / 夜间模式) | 雪泥鴻爪</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.haomingzhang.com/hexo_2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -318,7 +449,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-09-14 10:08:39" itemprop="dateModified" datetime="2020-09-14T10:08:39-07:00">2020-09-14</time>
+        <time title="修改时间：2020-09-16 21:39:23" itemprop="dateModified" datetime="2020-09-16T21:39:23-07:00">2020-09-16</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -916,13 +1047,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">11k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7 分钟</span>
+    <span title="站点阅读时长">10 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

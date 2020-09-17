@@ -25,36 +25,24 @@
     var CONFIG = {"hostname":"www.haomingzhang.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="前言经过了快一星期的折腾，我的博客的各项功能也在陆续开通中，本文就来记录一下hexo + github pages心路历程及配置方法。">
+  <meta name="description" content="前言虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可。 1darkmode: true  但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑&#x2F;白模式。如果你还没有自己的博客，可以参考我的前两篇文章：hexo基本安装及配置，hexo主题安装以及next8.0主题美化。 具体步骤1. 添加darkmode.js到你的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo基本安装及配置">
-<meta property="og:url" content="https://www.haomingzhang.com/hexo_1/index.html">
+<meta property="og:title" content="为hexo next8.0主题添加一个可以切换的黑色&#x2F;夜间模式">
+<meta property="og:url" content="https://www.haomingzhang.com/hexo_3/index.html">
 <meta property="og:site_name" content="Vince&#39;s Blog">
-<meta property="og:description" content="前言经过了快一星期的折腾，我的博客的各项功能也在陆续开通中，本文就来记录一下hexo + github pages心路历程及配置方法。">
+<meta property="og:description" content="前言虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可。 1darkmode: true  但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑&#x2F;白模式。如果你还没有自己的博客，可以参考我的前两篇文章：hexo基本安装及配置，hexo主题安装以及next8.0主题美化。 具体步骤1. 添加darkmode.js到你的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/1.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/2.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/3.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/4.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/5.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/6.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/7.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/9.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/10.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/11.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/12.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/13.png">
-<meta property="article:published_time" content="2020-09-13T18:32:25.000Z">
-<meta property="article:modified_time" content="2020-09-14T17:08:34.447Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif">
+<meta property="article:published_time" content="2020-09-17T03:58:30.000Z">
+<meta property="article:modified_time" content="2020-09-17T04:42:07.894Z">
 <meta property="article:author" content="Vince">
 <meta property="article:tag" content="杂谈">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/1.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif">
 
 
-<link rel="canonical" href="https://www.haomingzhang.com/hexo_1/">
+<link rel="canonical" href="https://www.haomingzhang.com/hexo_3/">
 
 
 <script class="page-configurations">
@@ -67,7 +55,7 @@
   };
 </script>
 
-  <title>hexo基本安装及配置 | Vince's Blog</title>
+  <title>为hexo next8.0主题添加一个可以切换的黑色/夜间模式 | Vince's Blog</title>
   
 
 
@@ -227,7 +215,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="nav-number">2.</span> <span class="nav-text">安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E8%A6%81%E5%87%86%E5%A4%87%E7%9A%84%E4%B8%9C%E8%A5%BF"><span class="nav-number">2.1.</span> <span class="nav-text">需要准备的东西</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B"><span class="nav-number">2.2.</span> <span class="nav-text">安装流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7github%E8%B4%A6%E5%8F%B7"><span class="nav-number">2.2.1.</span> <span class="nav-text">申请github账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E4%BB%93%E5%BA%93"><span class="nav-number">2.2.2.</span> <span class="nav-text">创建一个新的仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E4%B8%8A%E5%AE%89%E8%A3%85-git"><span class="nav-number">2.2.3.</span> <span class="nav-text">电脑上安装 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E4%B8%8A%E5%AE%89%E8%A3%85-node-js"><span class="nav-number">2.2.4.</span> <span class="nav-text">电脑上安装 node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">2.2.5.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%88%B0github-pages"><span class="nav-number">2.2.6.</span> <span class="nav-text">配置到github pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5"><span class="nav-number">2.2.7.</span> <span class="nav-text">访问网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">2.2.8.</span> <span class="nav-text">绑定你自己的域名（可选）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Upcoming-Next"><span class="nav-number">3.1.</span> <span class="nav-text">Upcoming Next</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">具体步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%B7%BB%E5%8A%A0darkmode-js%E5%88%B0%E4%BD%A0%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AD"><span class="nav-number">2.1.</span> <span class="nav-text">1. 添加darkmode.js到你的next主题中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%9C%A8%E4%BD%A0%E7%9A%84-config-next-yml-%E6%B7%BB%E5%8A%A0darkmode-js%E7%9A%84%E7%9B%B8%E5%85%B3%E5%BC%80%E5%85%B3%EF%BC%9A"><span class="nav-number">2.2.</span> <span class="nav-text">2. 在你的 _config.next.yml 添加darkmode_js的相关开关：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%BC%80%E5%90%AFdarkmode-js"><span class="nav-number">2.3.</span> <span class="nav-text">3. 开启darkmode_js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%87%8D%E6%96%B0%E7%94%9F%E6%88%90%E5%8D%B3%E5%8F%AF%E5%BC%80%E5%90%AF%EF%BC%8C%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E5%8D%B3%E5%8F%AF%E5%88%87%E6%8D%A2%E9%BB%91%E7%99%BD%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.4.</span> <span class="nav-text">4. 重新生成即可开启，点击按钮即可切换黑白模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Upcoming-next"><span class="nav-number">3.1.</span> <span class="nav-text">Upcoming next</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -303,7 +291,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.haomingzhang.com/hexo_1/">
+    <link itemprop="mainEntityOfPage" href="https://www.haomingzhang.com/hexo_3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn/avatar.jpg">
@@ -319,7 +307,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo基本安装及配置
+          为hexo next8.0主题添加一个可以切换的黑色/夜间模式
         </h1>
 
         <div class="post-meta-container">
@@ -329,16 +317,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2020-09-13 11:32:25" itemprop="dateCreated datePublished" datetime="2020-09-13T11:32:25-07:00">2020-09-13</time>
+      <time title="创建时间：2020-09-16 20:58:30 / 修改时间：21:42:07" itemprop="dateCreated datePublished" datetime="2020-09-16T20:58:30-07:00">2020-09-16</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-09-14 10:08:34" itemprop="dateModified" datetime="2020-09-14T10:08:34-07:00">2020-09-14</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -350,7 +332,7 @@
     </span>
 
   
-    <span id="/hexo_1/" class="post-meta-item leancloud_visitors" data-flag-title="hexo基本安装及配置" title="阅读次数">
+    <span id="/hexo_3/" class="post-meta-item leancloud_visitors" data-flag-title="为hexo next8.0主题添加一个可以切换的黑色/夜间模式" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -365,8 +347,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/hexo_1/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/hexo_1/" itemprop="commentCount"></span>
+    <a title="valine" href="/hexo_3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/hexo_3/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -378,7 +360,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.8k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -396,66 +378,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经过了快一星期的折腾，我的博客的各项功能也在陆续开通中，本文就来记录一下hexo + github pages心路历程及配置方法。</p>
-<a id="more"></a>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">darkmode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>可以通过右边的文章目录快速跳转哦！</p>
-</blockquote>
-<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><h2 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h2><ol>
-<li>github账号</li>
-<li>git(本地)</li>
-<li>node.js</li>
-<li>npm</li>
-<li>个人域名(可选)</li>
-</ol>
-<h2 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h2><h3 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请<a target="_blank" rel="noopener" href="https://github.com/">github</a>账号</h3><p>这里xxx填写你的github账户名称。如图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/1.png"><br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/2.png"></p>
-<h3 id="创建一个新的仓库"><a href="#创建一个新的仓库" class="headerlink" title="创建一个新的仓库"></a>创建一个新的仓库</h3><p>命名为 xxx.github.io<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/3.png"><br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/4.png"></p>
-<h3 id="电脑上安装-git"><a href="#电脑上安装-git" class="headerlink" title="电脑上安装 git"></a>电脑上安装 <a target="_blank" rel="noopener" href="https://git-scm.com/">git</a></h3><p>记得添加右键选单和加入PATH。具体git配置教程可以参考<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/dietime1943/article/details/71751007">[Git &amp; GitHub] Windows安装git和环境变量配置_Bluetata’s Tech.Blog-CSDN博客</a></p>
-<h3 id="电脑上安装-node-js"><a href="#电脑上安装-node-js" class="headerlink" title="电脑上安装 node.js"></a>电脑上安装 <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">node.js</a></h3><p>记得加入PATH。此版本node.js集成了npm，可以再命令行中输入node -v 以及 npm -v 检查是否安装成功。<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/5.png"></p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>使用命令行工具(cd xxxx) 进入你的博客文件夹，依次输入以下指令：<br>安装hexo和hexo服务器模块</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<p>但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑/白模式。如果你还没有自己的博客，可以参考我的前两篇文章：<a target="_blank" rel="noopener" href="https://haomingzhang.com/hexo_1/">hexo基本安装及配置</a>，<a target="_blank" rel="noopener" href="https://haomingzhang.com/hexo_2/">hexo主题安装以及next8.0主题美化</a>。</p>
+<h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><h2 id="1-添加darkmode-js到你的next主题中"><a href="#1-添加darkmode-js到你的next主题中" class="headerlink" title="1. 添加darkmode.js到你的next主题中"></a>1. 添加darkmode.js到你的next主题中</h2><p>你可以下载 <a target="_blank" rel="noopener" href="https://github.com/sandoche/Darkmode.js">Darkmode.js</a> 或者直接添加他的cdn到你的vendors文件。（注：next8.0之前的版本没有接下来所提到的需要的文件，可以参考<a target="_blank" rel="noopener" href="https://dog.wtf/tech/hexo-dark-mode-note/">这篇文章</a>来配置你的黑色模式）</p>
+<p>我的方法是直接在 themes/next/_vendors.yml 中添加 darkmode的 cdn：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">darkmode-js</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">1.5</span><span class="number">.7</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">lib/darkmode-js.min.js</span></span><br></pre></td></tr></table></figure>
+<p>直接加在文件末尾即可。</p>
+<h2 id="2-在你的-config-next-yml-添加darkmode-js的相关开关："><a href="#2-在你的-config-next-yml-添加darkmode-js的相关开关：" class="headerlink" title="2. 在你的 _config.next.yml 添加darkmode_js的相关开关："></a>2. 在你的 _config.next.yml 添加darkmode_js的相关开关：</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="comment">#darkmode_js: https://cdn.jsdelivr.net/npm/darkmode-js/lib/darkmode-js.min.js</span></span><br><span class="line">  <span class="attr">darkmode_js:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span> </span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>注意缩进！第一个darkmode_js是在vendors栏目下，第二个darkmode_js是一个单独的栏目。</p>
+<h2 id="3-开启darkmode-js"><a href="#3-开启darkmode-js" class="headerlink" title="3. 开启darkmode_js"></a>3. 开启darkmode_js</h2><p>打开 themes/next/layout/_scripts/vendors.njk，配置以下代码：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">%-</span> <span class="string">if</span> <span class="string">theme.canvas_ribbon.enable</span> <span class="string">%</span>&#125;</span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">size=&quot;&#123;&#123;</span> <span class="string">theme.canvas_ribbon.size</span> <span class="string">&#125;&#125;&quot;</span> <span class="string">alpha=&quot;&#123;&#123;</span> <span class="string">theme.canvas_ribbon.alpha</span> <span class="string">&#125;&#125;&quot;</span> <span class="string">zIndex=&quot;&#123;&#123;</span> <span class="string">theme.canvas_ribbon.zIndex</span> <span class="string">&#125;&#125;&quot;</span> <span class="string">src=&quot;&#123;&#123;</span> <span class="string">theme.vendors.canvas_ribbon</span> <span class="string">&#125;&#125;&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">&#123;<span class="string">%-</span> <span class="string">endif</span> <span class="string">%</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="comment"># Customize darkmode.js - Declaration #&#125;</span></span><br><span class="line">&#123;<span class="string">%-</span> <span class="string">if</span> <span class="string">theme.darkmode_js.enable</span> <span class="string">%</span>&#125;</span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">src=&quot;<span class="template-variable">&#123;&#123; theme.vendors.darkmode_js &#125;&#125;</span></span><span class="string">&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%- endif %&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#123;%- for name in js_vendors() %&#125;</span></span><br><span class="line"><span class="string">  &lt;script src=&quot;</span>&#123;&#123; <span class="string">url_for(theme.vendors</span>[<span class="string">name</span>]<span class="string">)</span> &#125;&#125;<span class="string">&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%- endfor %&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#123;# Customize darkmode.js - Invokation #&#125;</span></span><br><span class="line"><span class="string">&#123;%- if theme.darkmode_js.enable %&#125;</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">var options = &#123;</span></span><br><span class="line"><span class="string">  bottom: &#x27;64px&#x27;, // default: &#x27;32px&#x27;</span></span><br><span class="line"><span class="string">  right: &#x27;unset&#x27;, // default: &#x27;32px&#x27;</span></span><br><span class="line"><span class="string">  left: &#x27;32px&#x27;, // default: &#x27;unset&#x27;</span></span><br><span class="line"><span class="string">  time: &#x27;0.5s&#x27;, // default: &#x27;0.3s&#x27;</span></span><br><span class="line"><span class="string">  mixColor: &#x27;#fff&#x27;, // default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="string">  backgroundColor: &#x27;#fff&#x27;,  // default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="string">  buttonColorDark: &#x27;#100f2c&#x27;,  // default: &#x27;#100f2c&#x27;</span></span><br><span class="line"><span class="string">  buttonColorLight: &#x27;#fff&#x27;, // default: &#x27;#fff&#x27;</span></span><br><span class="line"><span class="string">  saveInCookies: true, // default: true,</span></span><br><span class="line"><span class="string">  label: &#x27;🌓&#x27;, // default: &#x27;&#x27;</span></span><br><span class="line"><span class="string">  autoMatchOsTheme: true // default: true</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">const darkmode = new Darkmode(options);</span></span><br><span class="line"><span class="string">darkmode.showWidget();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>初始化博客</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+<p>因为此版本的动画特效已经精简为只有canvas_ribbon，更改后的配置文件就如上所示，其他可以根据情况自行更改。</p>
+<h2 id="4-重新生成即可开启，点击按钮即可切换黑白模式"><a href="#4-重新生成即可开启，点击按钮即可切换黑白模式" class="headerlink" title="4. 重新生成即可开启，点击按钮即可切换黑白模式"></a>4. 重新生成即可开启，点击按钮即可切换黑白模式</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
 
-<p>测试hexo是否安装成功：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="built_in">test</span></span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p>其中hexo new test表示新建一篇名为test的博文，hexo g表示生成，是hexo generate的简写，hexo s在本地运行hexo服务器，是hexo server的简写。</p>
-<p>成功后会有如下提示，进入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可看到刚刚生成的网页。<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/6.png"></p>
-<p>以下为配置完成后的样子，可能和你生成的页面不同，如果想配置和我一样的hexo可以继续阅读我的其他post。<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/7.png"></p>
-<h3 id="配置到github-pages"><a href="#配置到github-pages" class="headerlink" title="配置到github pages"></a>配置到github pages</h3><p>之前的操作只是在本地实现了我们的博客，如何推送到github pages呢？</p>
-<p>首先，打开博客目录下的 _config.yml 文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png"></p>
-<p>使用 ctrl+f 搜索deploy，并添加以下代码。注意！把xxx改为之前在github配置的名字即可。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/xxx/xxx.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<p>接下来，安装hexo-deployer-git</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>接下来就可以推送我们的网页到github啦！</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line">$ hexo g </span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>其中hexo d表示deploy，是hexo deploy的简写，它会去config里面找到deploy栏目，然后根据你配置的deployer进行配置，十分方便！</p>
-<h3 id="访问网页"><a href="#访问网页" class="headerlink" title="访问网页"></a>访问网页</h3><p>如果之前的步骤都是正确的话，那么恭喜你！你已经可以访问你的网页了！</p>
-<p>比如我的网页： <a target="_blank" rel="noopener" href="https://haomingvince.github.io/">https://haomingvince.github.io</a></p>
-<p>把haomingvince改成你的github用户名即可</p>
-<h3 id="绑定你自己的域名（可选）"><a href="#绑定你自己的域名（可选）" class="headerlink" title="绑定你自己的域名（可选）"></a>绑定你自己的域名（可选）</h3><p>如果你已经拥有你自己的域名的话那是最好，如果你想购买一个域名，可以去<a target="_blank" rel="noopener" href="https://dnspod.cloud.tencent.com/">腾讯云</a>，<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">阿里云</a>，或者<a target="_blank" rel="noopener" href="https://go.skimresources.com/?id=157360X1623833&xs=1&xcreo=500002&url=https://www.godaddy.com">godaddy</a>购买。</p>
-<p>由于我的域名是在godaddy购买的，接下来我会演示如何绑定你的github pages到godaddy，其他域名商操作应该也是雷同的。</p>
-<p>登录你的godaddy后台，点击manage DNS<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/9.png"></p>
-<p>添加两条记录，一条CNAME，一条A记录，如图：<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/10.png"><br>其中CNAME的value就填写你的github page的值，A的value可以通过ping xxx.github.io得到。</p>
-<p>接下来，去到你的github page的settings界面，在Options-&gt;Github pages-&gt;custom domain添加你的域名：<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/11.png"></p>
-<p>最后一步，在你本地 /source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），里面添加你的域名即可。<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/12.png"></p>
-<p>再次执行deploy</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line">$ hexo g </span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>稍等几分钟，你就可以用自己的域名访问你的网站啦！<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/13.png"></p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>本文介绍了基本的hexo + github page的部署及实现，如果有任何问题，欢迎留言！</p>
-<h2 id="Upcoming-Next"><a href="#Upcoming-Next" class="headerlink" title="Upcoming Next"></a>Upcoming Next</h2><p>Next 8.0 主题配置 （<a target="_blank" rel="noopener" href="https://haomingzhang.com/hexo_2/">已更新</a>）</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://haomingzhang.com/">Vince’s Blog</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>因为next团队在8.0版本更改了比较多的代码，网上既有的教程并不适用于8.0版本，如果有这个按钮需要的话，可以按照本文配置哦！可以参考我的配置（Reference栏）来进行修改，如果有任何问题欢迎留言。</p>
+<p>最后效果<br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif"></p>
+<h2 id="Upcoming-next"><a href="#Upcoming-next" class="headerlink" title="Upcoming next"></a>Upcoming next</h2><p>为你的博客添加留言板功能</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/sandoche/Darkmode.js">sandoche/Darkmode.js: 🌓 Add a dark-mode / night-mode to your website in a few seconds</a></p>
+<p><a target="_blank" rel="noopener" href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode (暗色背景 / 夜间模式) | 雪泥鴻爪</a></p>
 
     </div>
 
@@ -473,7 +417,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.haomingzhang.com/hexo_1/" title="hexo基本安装及配置">https://www.haomingzhang.com/hexo_1/</a>
+      <a href="https://www.haomingzhang.com/hexo_3/" title="为hexo next8.0主题添加一个可以切换的黑色&#x2F;夜间模式">https://www.haomingzhang.com/hexo_3/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -490,14 +434,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/sorting_algorithms/" rel="prev" title="各种排序算法总结">
-                  <i class="fa fa-chevron-left"></i> 各种排序算法总结
+                <a href="/hexo_2/" rel="prev" title="hexo主题安装以及next8.0主题美化">
+                  <i class="fa fa-chevron-left"></i> hexo主题安装以及next8.0主题美化
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/hexo_2/" rel="next" title="hexo主题安装以及next8.0主题美化">
-                  hexo主题安装以及next8.0主题美化 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -664,7 +605,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({
       el  : '#valine-comments',
-      path: "/hexo_1/",
+      path: "/hexo_3/",
     }, {"enable":true,"appId":"6YXmeNRx0Jy2ler8O3Feh7Mw-MdYXbMMI","appKey":"la3UQfhO7Clf6cPfKxfqAbhT","placeholder":"输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像，并且省去了填写邮箱的麻烦！\n虽然email不是必选，但是填写了email可以收到推送通知哦！","avatar":"","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"serverURLs":null,"enableQQ":true,"requiredFields":["nick"],"emojiCDN":"//cdn.jsdelivr.net/gh/haomingvince/ghcdn/","emojiMaps":{"bilibili_doge.png":"CommentEmote/bilibili_doge.png","bilibili_baiyan.png":"CommentEmote/bilibili_baiyan.png","bilibili_bishi.png":"CommentEmote/bilibili_bishi.png","bilibili_bizui.png":"CommentEmote/bilibili_bizui.png","bilibili_chan.png":"CommentEmote/bilibili_chan.png","bilibili_dai.png":"CommentEmote/bilibili_dai.png","bilibili_daku.png":"CommentEmote/bilibili_daku.png","bilibili_dalao.png":"CommentEmote/bilibili_dalao.png","bilibili_dalian.png":"CommentEmote/bilibili_dalian.png","bilibili_dianzan.png":"CommentEmote/bilibili_dianzan.png","bilibili_facai.png":"CommentEmote/bilibili_facai.png","bilibili_fanu.png":"CommentEmote/bilibili_fanu.png","bilibili_ganga.png":"CommentEmote/bilibili_ganga.png","bilibili_guilian.png":"CommentEmote/bilibili_guilian.png","bilibili_guzhang.png":"CommentEmote/bilibili_guzhang.png","bilibili_haixiu.png":"CommentEmote/bilibili_haixiu.png","bilibili_heirenwenhao.png":"CommentEmote/bilibili_heirenwenhao.png","bilibili_huaixiao.png":"CommentEmote/bilibili_huaixiao.png","bilibili_jingxia.png":"CommentEmote/bilibili_jingxia.png","bilibili_keai.png":"CommentEmote/bilibili_keai.png","bilibili_koubi.png":"CommentEmote/bilibili_koubi.png","bilibili_kun.png":"CommentEmote/bilibili_kun.png","bilibili_lengmo.png":"CommentEmote/bilibili_lengmo.png","bilibili_liubixue.png":"CommentEmote/bilibili_liubixue.png","bilibili_liuhan.png":"CommentEmote/bilibili_liuhan.png","bilibili_liulei.png":"CommentEmote/bilibili_liulei.png","bilibili_miantian.png":"CommentEmote/bilibili_miantian.png","bilibili_mudengkoudai.png":"CommentEmote/bilibili_mudengkoudai.png","bilibili_nanguo.png":"CommentEmote/bilibili_nanguo.png","bilibili_outu.png":"CommentEmote/bilibili_outu.png","bilibili_qinqin.png":"CommentEmote/bilibili_qinqin.png","bilibili_se.png":"CommentEmote/bilibili_se.png","bilibili_shengbing.png":"CommentEmote/bilibili_shengbing.png","bilibili_shengqi.png":"CommentEmote/bilibili_shengqi.png","bilibili_shuizhao.png":"CommentEmote/bilibili_shuizhao.png","bilibili_sikao.png":"CommentEmote/bilibili_sikao.png","bilibili_tiaokan.png":"CommentEmote/bilibili_tiaokan.png","bilibili_tiaopi.png":"CommentEmote/bilibili_tiaopi.png","bilibili_touxiao.png":"CommentEmote/bilibili_touxiao.png","bilibili_tuxie.png":"CommentEmote/bilibili_tuxie.png","bilibili_weiqu.png":"CommentEmote/bilibili_weiqu.png","bilibili_weixiao.png":"CommentEmote/bilibili_weixiao.png","bilibili_wunai.png":"CommentEmote/bilibili_wunai.png","bilibili_xiaoku.png":"CommentEmote/bilibili_xiaoku.png","bilibili_xieyanxiao.png":"CommentEmote/bilibili_xieyanxiao.png","bilibili_yiwen.png":"CommentEmote/bilibili_yiwen.png","bilibili_yun.png":"CommentEmote/bilibili_yun.png","bilibili_zaijian.png":"CommentEmote/bilibili_zaijian.png","bilibili_zhoumei.png":"CommentEmote/bilibili_zhoumei.png","bilibili_zhuakuang.png":"CommentEmote/bilibili_zhuakuang.png","tieba_1.png":"CommentEmote/tieba_1.png","tieba_2.png":"CommentEmote/tieba_2.png","tieba_3.png":"CommentEmote/tieba_3.png","tieba_4.png":"CommentEmote/tieba_4.png","tieba_5.png":"CommentEmote/tieba_5.png","tieba_6.png":"CommentEmote/tieba_6.png","tieba_7.png":"CommentEmote/tieba_7.png","tieba_8.png":"CommentEmote/tieba_8.png","tieba_9.png":"CommentEmote/tieba_9.png","tieba_10.png":"CommentEmote/tieba_10.png","tieba_11.png":"CommentEmote/tieba_11.png","tieba_12.png":"CommentEmote/tieba_12.png","tieba_13.png":"CommentEmote/tieba_13.png","tieba_14.png":"CommentEmote/tieba_14.png","tieba_15.png":"CommentEmote/tieba_15.png","tieba_16.png":"CommentEmote/tieba_16.png","tieba_17.png":"CommentEmote/tieba_17.png","tieba_18.png":"CommentEmote/tieba_18.png","tieba_19.png":"CommentEmote/tieba_19.png","tieba_20.png":"CommentEmote/tieba_20.png","tieba_21.png":"CommentEmote/tieba_21.png","tieba_22.png":"CommentEmote/tieba_22.png","tieba_23.png":"CommentEmote/tieba_23.png","tieba_24.png":"CommentEmote/tieba_24.png","tieba_25.png":"CommentEmote/tieba_25.png","tieba_26.png":"CommentEmote/tieba_26.png","tieba_27.png":"CommentEmote/tieba_27.png","tieba_28.png":"CommentEmote/tieba_28.png","tieba_29.png":"CommentEmote/tieba_29.png","tieba_30.png":"CommentEmote/tieba_30.png","tieba_31.png":"CommentEmote/tieba_31.png","tieba_32.png":"CommentEmote/tieba_32.png","tieba_33.png":"CommentEmote/tieba_33.png","tieba_46.png":"CommentEmote/tieba_46.png","tieba_47.png":"CommentEmote/tieba_47.png","tieba_48.png":"CommentEmote/tieba_48.png","tieba_49.png":"CommentEmote/tieba_49.png","tieba_50.png":"CommentEmote/tieba_50.png","tieba_66.png":"CommentEmote/tieba_66.png","tieba_67.png":"CommentEmote/tieba_67.png","tieba_68.png":"CommentEmote/tieba_68.png","tieba_69.png":"CommentEmote/tieba_69.png","tieba_70.png":"CommentEmote/tieba_70.png","tieba_71.png":"CommentEmote/tieba_71.png","tieba_72.png":"CommentEmote/tieba_72.png","tieba_73.png":"CommentEmote/tieba_73.png","tieba_74.png":"CommentEmote/tieba_74.png","tieba_75.png":"CommentEmote/tieba_75.png","tieba_76.png":"CommentEmote/tieba_76.png","tieba_86.png":"CommentEmote/tieba_86.png","tieba_87.png":"CommentEmote/tieba_87.png","tieba_88.png":"CommentEmote/tieba_88.png","tieba_89.png":"CommentEmote/tieba_89.png","tieba_90.png":"CommentEmote/tieba_90.png","tieba_91.png":"CommentEmote/tieba_91.png","tieba_92.png":"CommentEmote/tieba_92.png","tieba_93.png":"CommentEmote/tieba_93.png","tieba_95.png":"CommentEmote/tieba_95.png","tieba_96.png":"CommentEmote/tieba_96.png","tieba_97.png":"CommentEmote/tieba_97.png","tieba_98.png":"CommentEmote/tieba_98.png"}}
     ));
   }, window.Valine);
