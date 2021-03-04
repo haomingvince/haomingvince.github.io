@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.haomingzhang.com/gtao_boost/</loc>
+    <loc>https://www.haomingzhang.com/gta_boost/</loc>
+    
+    <lastmod>2021-03-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.haomingzhang.com/hexo_1/</loc>
     
     <lastmod>2021-03-04</lastmod>
     
@@ -11,28 +18,21 @@
   <url>
     <loc>https://www.haomingzhang.com/hexo_4/</loc>
     
-    <lastmod>2020-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.haomingzhang.com/hexo_3/</loc>
-    
-    <lastmod>2020-09-21</lastmod>
+    <lastmod>2020-09-24</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.haomingzhang.com/hexo_2/</loc>
     
-    <lastmod>2020-09-17</lastmod>
+    <lastmod>2020-09-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.haomingzhang.com/hexo_1/</loc>
+    <loc>https://www.haomingzhang.com/hexo_3/</loc>
     
-    <lastmod>2020-09-14</lastmod>
+    <lastmod>2020-09-24</lastmod>
     
   </url>
   
@@ -67,6 +67,13 @@
 
   
   <url>
+    <loc>https://www.haomingzhang.com/tags/GTA5/</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.haomingzhang.com/tags/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2021-03-04</lastmod>
     <changefreq>daily</changefreq>
@@ -94,17 +101,17 @@
     <priority>0.6</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://www.haomingzhang.com/tags/GTA5/</loc>
+    <loc>https://www.haomingzhang.com/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2021-03-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://www.haomingzhang.com/categories/%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://www.haomingzhang.com/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-03-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -118,7 +125,7 @@
   </url>
   
   <url>
-    <loc>https://www.haomingzhang.com/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://www.haomingzhang.com/categories/%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2021-03-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

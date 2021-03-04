@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GTA5在线模式加载速度加速(大幅提升)</title>
+    <url>/gta_boost/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
+<p>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</p>
+<a id="more"></a>
+
+<blockquote>
+<p>可以通过右边的文章目录快速跳转哦！</p>
+</blockquote>
+<h1 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h1><h2 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h2><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
+<p>提取码：j0zd</p>
+<h2 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h2><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是63位）。</p>
+<h2 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h2><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png"></p>
+<h2 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h2><ul>
+<li>点击Process，找到GTA5.exe</li>
+<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
+<li>点击Inject</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png"></p>
+<h2 id="5-点击进入GTA-Onlie"><a href="#5-点击进入GTA-Onlie" class="headerlink" title="5. 点击进入GTA Onlie"></a>5. 点击进入GTA Onlie</h2><p>Enjoy! 本人实测加载速度大幅提升！！</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></p>
+<p><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></p>
+<p><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>GTA5</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo基本安装及配置</title>
     <url>/hexo_1/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经过了快一星期的折腾，我的博客的各项功能也在陆续开通中，本文就来记录一下hexo + github pages心路历程及配置方法。</p>
@@ -64,6 +98,9 @@
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://haomingzhang.com/">Vince’s Blog</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></p>
 ]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
       <tags>
         <tag>杂谈</tag>
         <tag>Hexo</tag>
@@ -130,6 +167,68 @@
 <h2 id="Upcoming-Next"><a href="#Upcoming-Next" class="headerlink" title="Upcoming Next"></a>Upcoming Next</h2><p>下一篇文章中，我会介绍一些我使用的插件。（<a href="https://haomingzhang.com/hexo_3/">已更新</a>）</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
 ]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo + next8.0开启Valine评论系统及添加留言板功能</title>
+    <url>/hexo_4/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经过前三轮的折腾，你已经拥有一个自己定义的静态页面了，是时候给它添加一个留言板功能了。next主题自带了多种留言功能的插件，比如畅言，disqus，disqusjs，gitalk，livere，valine。 valine是其中相对简洁并且限制较少的一款轻量型博客评论系统。本文将教你如何开启并美化valine评论系统。如果你还没有配置你自己的博客，可以参考我的<a href="https://haomingzhang.com/tags/Hexo/">前几篇文章</a>。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>可以通过右边的文章目录快速跳转哦！</p>
+</blockquote>
+<h1 id="开启valine评论系统"><a href="#开启valine评论系统" class="headerlink" title="开启valine评论系统"></a>开启valine评论系统</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a>1. 注册 Leancloud 账号</h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。本文将使用国际版作为演示，国内版有些许不同，同学们可以自行查阅网上的资料。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/14.png"></p>
+<p>注册完成后进入app控制面板-&gt;创建应用-&gt;创建开发版应用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/15.png"></p>
+<p>接下来我们配置一下我们的leancloud。点击设置-&gt;安全中心-&gt;Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/16.png"></p>
+<p>接下来点击应用keys获取你的appid和appkey。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/17.png"></p>
+<h2 id="2-在next主题中配置valine"><a href="#2-在next主题中配置valine" class="headerlink" title="2. 在next主题中配置valine"></a>2. 在next主题中配置valine</h2><p>打开 _config.next.yml，找到comments栏目并开启valine。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">active:</span> <span class="string">valine</span></span><br></pre></td></tr></table></figure>
+
+<p>往下滑动进入valine设置栏，开启valine并填入你的appid和appkey。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span>  <span class="comment"># Your leancloud application appid</span></span><br><span class="line">  <span class="attr">appKey:</span>  <span class="comment"># Your leancloud application appkey</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">&quot;输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像，并且省去了填写邮箱的麻烦！\n虽然email不是必选，但是填写了email可以收到推送通知哦！&quot;</span> <span class="comment"># Comment box placeholder</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">&quot;&quot;</span> <span class="comment"># Gravatar style</span></span><br><span class="line">  <span class="attr">meta:</span> [<span class="string">nick</span>, <span class="string">mail</span>] <span class="comment"># Custom comment header</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">10</span> <span class="comment"># Pagination size</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="comment"># Language, available values: en, zh-cn</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span> <span class="comment"># Article reading statistic</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span> <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">true</span> <span class="comment"># Whether to record the commenter IP</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)</span></span><br><span class="line">  <span class="attr">enableQQ:</span> <span class="literal">true</span> <span class="comment"># Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span></span><br><span class="line">  <span class="attr">requiredFields:</span> [<span class="string">nick</span>] <span class="comment"># Set required fields: [nick] | [nick, mail]</span></span><br></pre></td></tr></table></figure>
+
+<p>这里稍微解释一下各个参数的用途。<br>placeholder是在用户未输入任何参数时默认显示的值；<br>avatar是默认用户头像，参考<a href="https://valine.js.org/avatar.html">link</a>；<br>meta是可以选择的用户信息栏；<br>enableQQ可以自动匹配用户在nick栏目的输入，若是QQ，直接拉取用户的QQ头像和昵称作为评论使用，推荐开启（目前有个bug，若用户QQ昵称小于三个字符，可能出现拉取失败，等待大佬更新）；<br>其他的配置可以参考<a href="https://valine.js.org/configuration.html">link</a>。</p>
+<blockquote>
+<p>至此你的评论系统已经开启。</p>
+</blockquote>
+<h2 id="3-在菜单栏添加留言板"><a href="#3-在菜单栏添加留言板" class="headerlink" title="3. 在菜单栏添加留言板"></a>3. 在菜单栏添加留言板</h2><p>添加一个新的page</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo new page guestbook</span><br></pre></td></tr></table></figure>
+
+<p>进入 source/guestbook/index.md。加入你想显示的内容，如：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 留言板</span><br><span class="line">date: 2020-09-13 13:34:29</span><br><span class="line">---</span><br><span class="line"><span class="section"># 欢迎来到我的博客！</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在nickname栏目输入QQ号可以直接获取你的QQ头像。</span></span><br></pre></td></tr></table></figure>
+
+<p>进入 _config.next.yml， 找到menu栏目，添加留言板功能：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">guestbook:</span> <span class="string">/guestbook/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-book</span></span><br></pre></td></tr></table></figure>
+
+<p>图标支持font awesome，可以按自己喜好修改。</p>
+<p>如果有多语言支持需求，可以更改 themes/next/languages 下对应语言的翻译。</p>
+<p>en.yml:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">guestbook:</span> <span class="string">guestbook</span></span><br></pre></td></tr></table></figure>
+
+<p>zh-CN.yml:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">guestbook:</span> <span class="string">留言板</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-重新生成页面即可"><a href="#4-重新生成页面即可" class="headerlink" title="4. 重新生成页面即可"></a>4. 重新生成页面即可</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>valine比较简洁、配置简单且免费，非常推荐作为个人博客的评论系统来使用。网上有很多魔改版本的valine可以实现更多功能，有需要的同学可以自行查阅哦！如果有任何关于本篇文章的问题欢迎留言。</p>
+<h2 id="Upcoming-next"><a href="#Upcoming-next" class="headerlink" title="Upcoming next"></a>Upcoming next</h2><p>更改Valine评论表情（未更新）</p>
+<p>修复valine无法读取国际版leancloud评论（<a href="https://haomingzhang.com/valine_1">已更新</a>）</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
       <tags>
         <tag>杂谈</tag>
         <tag>Hexo</tag>
@@ -163,6 +262,9 @@
 <p><a href="https://github.com/sandoche/Darkmode.js">sandoche/Darkmode.js: 🌓 Add a dark-mode / night-mode to your website in a few seconds</a></p>
 <p><a href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode (暗色背景 / 夜间模式) | 雪泥鴻爪</a></p>
 ]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
       <tags>
         <tag>杂谈</tag>
         <tag>Hexo</tag>
@@ -376,95 +478,6 @@
       </categories>
       <tags>
         <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo + next8.0开启Valine评论系统及添加留言板功能</title>
-    <url>/hexo_4/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经过前三轮的折腾，你已经拥有一个自己定义的静态页面了，是时候给它添加一个留言板功能了。next主题自带了多种留言功能的插件，比如畅言，disqus，disqusjs，gitalk，livere，valine。 valine是其中相对简洁并且限制较少的一款轻量型博客评论系统。本文将教你如何开启并美化valine评论系统。如果你还没有配置你自己的博客，可以参考我的<a href="https://haomingzhang.com/tags/Hexo/">前几篇文章</a>。</p>
-<a id="more"></a>
-
-<blockquote>
-<p>可以通过右边的文章目录快速跳转哦！</p>
-</blockquote>
-<h1 id="开启valine评论系统"><a href="#开启valine评论系统" class="headerlink" title="开启valine评论系统"></a>开启valine评论系统</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a>1. 注册 Leancloud 账号</h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。本文将使用国际版作为演示，国内版有些许不同，同学们可以自行查阅网上的资料。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/14.png"></p>
-<p>注册完成后进入app控制面板-&gt;创建应用-&gt;创建开发版应用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/15.png"></p>
-<p>接下来我们配置一下我们的leancloud。点击设置-&gt;安全中心-&gt;Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/16.png"></p>
-<p>接下来点击应用keys获取你的appid和appkey。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/17.png"></p>
-<h2 id="2-在next主题中配置valine"><a href="#2-在next主题中配置valine" class="headerlink" title="2. 在next主题中配置valine"></a>2. 在next主题中配置valine</h2><p>打开 _config.next.yml，找到comments栏目并开启valine。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">active:</span> <span class="string">valine</span></span><br></pre></td></tr></table></figure>
-
-<p>往下滑动进入valine设置栏，开启valine并填入你的appid和appkey。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span>  <span class="comment"># Your leancloud application appid</span></span><br><span class="line">  <span class="attr">appKey:</span>  <span class="comment"># Your leancloud application appkey</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">&quot;输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像，并且省去了填写邮箱的麻烦！\n虽然email不是必选，但是填写了email可以收到推送通知哦！&quot;</span> <span class="comment"># Comment box placeholder</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">&quot;&quot;</span> <span class="comment"># Gravatar style</span></span><br><span class="line">  <span class="attr">meta:</span> [<span class="string">nick</span>, <span class="string">mail</span>] <span class="comment"># Custom comment header</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">10</span> <span class="comment"># Pagination size</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="comment"># Language, available values: en, zh-cn</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span> <span class="comment"># Article reading statistic</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span> <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">true</span> <span class="comment"># Whether to record the commenter IP</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)</span></span><br><span class="line">  <span class="attr">enableQQ:</span> <span class="literal">true</span> <span class="comment"># Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span></span><br><span class="line">  <span class="attr">requiredFields:</span> [<span class="string">nick</span>] <span class="comment"># Set required fields: [nick] | [nick, mail]</span></span><br></pre></td></tr></table></figure>
-
-<p>这里稍微解释一下各个参数的用途。<br>placeholder是在用户未输入任何参数时默认显示的值；<br>avatar是默认用户头像，参考<a href="https://valine.js.org/avatar.html">link</a>；<br>meta是可以选择的用户信息栏；<br>enableQQ可以自动匹配用户在nick栏目的输入，若是QQ，直接拉取用户的QQ头像和昵称作为评论使用，推荐开启（目前有个bug，若用户QQ昵称小于三个字符，可能出现拉取失败，等待大佬更新）；<br>其他的配置可以参考<a href="https://valine.js.org/configuration.html">link</a>。</p>
-<blockquote>
-<p>至此你的评论系统已经开启。</p>
-</blockquote>
-<h2 id="3-在菜单栏添加留言板"><a href="#3-在菜单栏添加留言板" class="headerlink" title="3. 在菜单栏添加留言板"></a>3. 在菜单栏添加留言板</h2><p>添加一个新的page</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo new page guestbook</span><br></pre></td></tr></table></figure>
-
-<p>进入 source/guestbook/index.md。加入你想显示的内容，如：</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 留言板</span><br><span class="line">date: 2020-09-13 13:34:29</span><br><span class="line">---</span><br><span class="line"><span class="section"># 欢迎来到我的博客！</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在nickname栏目输入QQ号可以直接获取你的QQ头像。</span></span><br></pre></td></tr></table></figure>
-
-<p>进入 _config.next.yml， 找到menu栏目，添加留言板功能：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">guestbook:</span> <span class="string">/guestbook/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-book</span></span><br></pre></td></tr></table></figure>
-
-<p>图标支持font awesome，可以按自己喜好修改。</p>
-<p>如果有多语言支持需求，可以更改 themes/next/languages 下对应语言的翻译。</p>
-<p>en.yml:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">guestbook:</span> <span class="string">guestbook</span></span><br></pre></td></tr></table></figure>
-
-<p>zh-CN.yml:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">guestbook:</span> <span class="string">留言板</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4-重新生成页面即可"><a href="#4-重新生成页面即可" class="headerlink" title="4. 重新生成页面即可"></a>4. 重新生成页面即可</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>valine比较简洁、配置简单且免费，非常推荐作为个人博客的评论系统来使用。网上有很多魔改版本的valine可以实现更多功能，有需要的同学可以自行查阅哦！如果有任何关于本篇文章的问题欢迎留言。</p>
-<h2 id="Upcoming-next"><a href="#Upcoming-next" class="headerlink" title="Upcoming next"></a>Upcoming next</h2><p>更改Valine评论表情</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
-]]></content>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GTA5在线模式加载速度加速(超过70%优化)</title>
-    <url>/gtao_boost/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
-<p>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</p>
-<a id="more"></a>
-
-<blockquote>
-<p>可以通过右边的文章目录快速跳转哦！</p>
-</blockquote>
-<h1 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h1><h2 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h2><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
-<p>提取码：j0zd</p>
-<h2 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h2><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是63位）。</p>
-<h2 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h2><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png"></p>
-<h2 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h2><ul>
-<li>点击Process，找到GTA5.exe</li>
-<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
-<li>点击Inject</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png"></p>
-<h2 id="5-点击进入GTA-Onlie"><a href="#5-点击进入GTA-Onlie" class="headerlink" title="5. 点击进入GTA Onlie"></a>5. 点击进入GTA Onlie</h2><p>Enjoy! 本人实测加载速度大幅提升！！</p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></p>
-<p><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></p>
-<p><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></p>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>GTA5</tag>
       </tags>
   </entry>
 </search>
