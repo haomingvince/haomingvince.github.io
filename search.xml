@@ -64,9 +64,6 @@
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://haomingzhang.com/">Vince’s Blog</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></p>
 ]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
       <tags>
         <tag>杂谈</tag>
         <tag>Hexo</tag>
@@ -133,9 +130,6 @@
 <h2 id="Upcoming-Next"><a href="#Upcoming-Next" class="headerlink" title="Upcoming Next"></a>Upcoming Next</h2><p>下一篇文章中，我会介绍一些我使用的插件。（<a href="https://haomingzhang.com/hexo_3/">已更新</a>）</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
 ]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
       <tags>
         <tag>杂谈</tag>
         <tag>Hexo</tag>
@@ -169,9 +163,6 @@
 <p><a href="https://github.com/sandoche/Darkmode.js">sandoche/Darkmode.js: 🌓 Add a dark-mode / night-mode to your website in a few seconds</a></p>
 <p><a href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode (暗色背景 / 夜间模式) | 雪泥鴻爪</a></p>
 ]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
       <tags>
         <tag>杂谈</tag>
         <tag>Hexo</tag>
@@ -437,12 +428,43 @@
 <h2 id="Upcoming-next"><a href="#Upcoming-next" class="headerlink" title="Upcoming next"></a>Upcoming next</h2><p>更改Valine评论表情</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></p>
 ]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
       <tags>
         <tag>杂谈</tag>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GTA5在线模式加载速度加速(超过70%优化)</title>
+    <url>/gtao_boost/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
+<p>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</p>
+<a id="more"></a>
+
+<blockquote>
+<p>可以通过右边的文章目录快速跳转哦！</p>
+</blockquote>
+<h1 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h1><h2 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h2><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
+<p>提取码：j0zd</p>
+<h2 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h2><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是63位）。</p>
+<h2 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h2><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png"></p>
+<h2 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h2><ul>
+<li>点击Process，找到GTA5.exe</li>
+<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
+<li>点击Inject</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png"></p>
+<h2 id="5-点击进入GTA-Onlie"><a href="#5-点击进入GTA-Onlie" class="headerlink" title="5. 点击进入GTA Onlie"></a>5. 点击进入GTA Onlie</h2><p>Enjoy! 本人实测加载速度大幅提升！！</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></p>
+<p><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></p>
+<p><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>GTA5</tag>
       </tags>
   </entry>
 </search>
