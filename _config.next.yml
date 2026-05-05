@@ -716,8 +716,8 @@ gitalk:
   enable: true
   github_id: haomingvince # GitHub repo owner
   repo: haomingvince.github.io # Repository name to store issues
-  client_id: # TODO: GitHub OAuth App Client ID
-  client_secret: # TODO: GitHub OAuth App Client Secret
+  client_id: Ov23li6EIikZ2plpvUfw
+  client_secret: ce2eae4e2d2663be9475afe66d98a7e6a9ca9d43
   admin_user: haomingvince # GitHub repo owner and collaborators
   distraction_free_mode: true
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
