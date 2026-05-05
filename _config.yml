@@ -29,6 +29,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - README.md
+  - .gitignore
 
 # Writing
 new_post_name: :title.md
@@ -84,6 +85,7 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 include:
+  - .gitignore
 exclude:
 ignore:
 
