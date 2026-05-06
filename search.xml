@@ -34,44 +34,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GTA5在线模式加载速度加速(大幅提升)</title>
-    <url>//gta_boost/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
-<p><strong>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</strong></p>
-<span id="more"></span>
-
-<h2 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h2><h3 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h3><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
-<p>提取码：j0zd</p>
-<blockquote>
-<p>注意：每次启动游戏都要经过以下的步骤进入线上模式！</p>
-</blockquote>
-<h3 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h3><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是64位）。</p>
-<h3 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h3><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png" alt="GTA5"></p>
-<h3 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h3><ul>
-<li>点击Process，找到GTA5.exe</li>
-<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
-<li>点击Inject</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png" alt="Xenos"></p>
-<h3 id="5-点击进入GTA-Online"><a href="#5-点击进入GTA-Online" class="headerlink" title="5. 点击进入GTA Online"></a>5. 点击进入GTA Online</h3><p>Enjoy! 本人实测加载速度大幅提升！！</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></li>
-<li><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></li>
-<li><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>GTA5</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo基本安装及配置</title>
     <url>//hexo_1/</url>
     <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
@@ -143,6 +105,46 @@
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a href="https://haomingzhang.com/">Vince’s Blog</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为hexo next8.0主题添加一个可以切换的黑色/夜间模式</title>
+    <url>//hexo_3/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑&#x2F;白模式。如果你还没有自己的博客，可以参考我的前两篇文章：<a href="https://haomingzhang.com/hexo_1/">hexo基本安装及配置</a>，<a href="https://haomingzhang.com/hexo_2/">hexo主题安装以及next8.0主题美化</a>。</p>
+<span id="more"></span>
+
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="1-添加darkmode-js到你的next主题中"><a href="#1-添加darkmode-js到你的next主题中" class="headerlink" title="1. 添加darkmode.js到你的next主题中"></a>1. 添加darkmode.js到你的next主题中</h3><p>你可以下载 <a href="https://github.com/sandoche/Darkmode.js">Darkmode.js</a> 或者直接添加他的cdn到你的vendors文件。</p>
+<p>我的方法是直接在 themes&#x2F;next&#x2F;_vendors.yml 中添加 darkmode的 cdn：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">darkmode-js</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">1.5</span><span class="number">.7</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">lib/darkmode-js.min.js</span></span><br></pre></td></tr></table></figure>
+
+<p>直接加在文件末尾即可。</p>
+<h3 id="2-在你的-config-next-yml-添加darkmode-js的相关开关："><a href="#2-在你的-config-next-yml-添加darkmode-js的相关开关：" class="headerlink" title="2. 在你的 _config.next.yml 添加darkmode_js的相关开关："></a>2. 在你的 _config.next.yml 添加darkmode_js的相关开关：</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="attr">darkmode_js:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>注意缩进！第一个darkmode_js是在vendors栏目下，第二个darkmode_js是一个单独的栏目。</p>
+<h3 id="3-开启darkmode-js"><a href="#3-开启darkmode-js" class="headerlink" title="3. 开启darkmode_js"></a>3. 开启darkmode_js</h3><p>打开 themes&#x2F;next&#x2F;layout&#x2F;_scripts&#x2F;vendors.njk，配置以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if theme.canvas_ribbon.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.canvas_ribbon &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Declaration #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.darkmode_js &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- for name in js_vendors() %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; url_for(theme.vendors[name]) &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endfor %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Invokation #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var options = &#123;</span><br><span class="line">  bottom: &#x27;64px&#x27;,</span><br><span class="line">  right: &#x27;unset&#x27;,</span><br><span class="line">  left: &#x27;32px&#x27;,</span><br><span class="line">  time: &#x27;0.5s&#x27;,</span><br><span class="line">  mixColor: &#x27;#fff&#x27;,</span><br><span class="line">  backgroundColor: &#x27;#fff&#x27;,</span><br><span class="line">  buttonColorDark: &#x27;#100f2c&#x27;,</span><br><span class="line">  buttonColorLight: &#x27;#fff&#x27;,</span><br><span class="line">  saveInCookies: true,</span><br><span class="line">  label: &#x27;🌓&#x27;,</span><br><span class="line">  autoMatchOsTheme: true</span><br><span class="line">&#125;</span><br><span class="line">const darkmode = new Darkmode(options);</span><br><span class="line">darkmode.showWidget();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为此版本的动画特效已经精简为只有canvas_ribbon，更改后的配置文件就如上所示。</p>
+<h3 id="4-重新生成即可开启"><a href="#4-重新生成即可开启" class="headerlink" title="4. 重新生成即可开启"></a>4. 重新生成即可开启</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>因为next团队在8.0版本更改了比较多的代码，网上既有的教程并不适用于8.0版本，如果有这个按钮需要的话，可以按照本文配置哦！</p>
+<p>最后效果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif" alt="darkmode效果"></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></li>
+<li><a href="https://github.com/sandoche/Darkmode.js">sandoche&#x2F;Darkmode.js</a></li>
+<li><a href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -251,84 +253,41 @@
       </tags>
   </entry>
   <entry>
-    <title>为hexo next8.0主题添加一个可以切换的黑色/夜间模式</title>
-    <url>//hexo_3/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑&#x2F;白模式。如果你还没有自己的博客，可以参考我的前两篇文章：<a href="https://haomingzhang.com/hexo_1/">hexo基本安装及配置</a>，<a href="https://haomingzhang.com/hexo_2/">hexo主题安装以及next8.0主题美化</a>。</p>
-<span id="more"></span>
-
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="1-添加darkmode-js到你的next主题中"><a href="#1-添加darkmode-js到你的next主题中" class="headerlink" title="1. 添加darkmode.js到你的next主题中"></a>1. 添加darkmode.js到你的next主题中</h3><p>你可以下载 <a href="https://github.com/sandoche/Darkmode.js">Darkmode.js</a> 或者直接添加他的cdn到你的vendors文件。</p>
-<p>我的方法是直接在 themes&#x2F;next&#x2F;_vendors.yml 中添加 darkmode的 cdn：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">darkmode-js</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">1.5</span><span class="number">.7</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">lib/darkmode-js.min.js</span></span><br></pre></td></tr></table></figure>
-
-<p>直接加在文件末尾即可。</p>
-<h3 id="2-在你的-config-next-yml-添加darkmode-js的相关开关："><a href="#2-在你的-config-next-yml-添加darkmode-js的相关开关：" class="headerlink" title="2. 在你的 _config.next.yml 添加darkmode_js的相关开关："></a>2. 在你的 _config.next.yml 添加darkmode_js的相关开关：</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="attr">darkmode_js:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>注意缩进！第一个darkmode_js是在vendors栏目下，第二个darkmode_js是一个单独的栏目。</p>
-<h3 id="3-开启darkmode-js"><a href="#3-开启darkmode-js" class="headerlink" title="3. 开启darkmode_js"></a>3. 开启darkmode_js</h3><p>打开 themes&#x2F;next&#x2F;layout&#x2F;_scripts&#x2F;vendors.njk，配置以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if theme.canvas_ribbon.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.canvas_ribbon &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Declaration #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.darkmode_js &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- for name in js_vendors() %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; url_for(theme.vendors[name]) &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endfor %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Invokation #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var options = &#123;</span><br><span class="line">  bottom: &#x27;64px&#x27;,</span><br><span class="line">  right: &#x27;unset&#x27;,</span><br><span class="line">  left: &#x27;32px&#x27;,</span><br><span class="line">  time: &#x27;0.5s&#x27;,</span><br><span class="line">  mixColor: &#x27;#fff&#x27;,</span><br><span class="line">  backgroundColor: &#x27;#fff&#x27;,</span><br><span class="line">  buttonColorDark: &#x27;#100f2c&#x27;,</span><br><span class="line">  buttonColorLight: &#x27;#fff&#x27;,</span><br><span class="line">  saveInCookies: true,</span><br><span class="line">  label: &#x27;🌓&#x27;,</span><br><span class="line">  autoMatchOsTheme: true</span><br><span class="line">&#125;</span><br><span class="line">const darkmode = new Darkmode(options);</span><br><span class="line">darkmode.showWidget();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>因为此版本的动画特效已经精简为只有canvas_ribbon，更改后的配置文件就如上所示。</p>
-<h3 id="4-重新生成即可开启"><a href="#4-重新生成即可开启" class="headerlink" title="4. 重新生成即可开启"></a>4. 重新生成即可开启</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>因为next团队在8.0版本更改了比较多的代码，网上既有的教程并不适用于8.0版本，如果有这个按钮需要的话，可以按照本文配置哦！</p>
-<p>最后效果：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif" alt="darkmode效果"></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></li>
-<li><a href="https://github.com/sandoche/Darkmode.js">sandoche&#x2F;Darkmode.js</a></li>
-<li><a href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo + next8.0开启Valine评论系统及添加留言板功能</title>
-    <url>//hexo_4/</url>
+    <title>GTA5在线模式加载速度加速(大幅提升)</title>
+    <url>//gta_boost/</url>
     <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经过前三轮的折腾，你已经拥有一个自己定义的静态页面了，是时候给它添加一个留言板功能了。next主题自带了多种留言功能的插件，比如畅言，disqus，disqusjs，gitalk，livere，valine。 valine是其中相对简洁并且限制较少的一款轻量型博客评论系统。本文将教你如何开启并美化valine评论系统。如果你还没有配置你自己的博客，可以参考我的<a href="https://haomingzhang.com/tags/Hexo/">前几篇文章</a>。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
+<p><strong>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</strong></p>
 <span id="more"></span>
 
-<h2 id="开启valine评论系统"><a href="#开启valine评论系统" class="headerlink" title="开启valine评论系统"></a>开启valine评论系统</h2><h3 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a>1. 注册 Leancloud 账号</h3><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/14.png" alt="leancloud注册"></p>
-<p>注册完成后进入app控制面板 -&gt; 创建应用 -&gt; 创建开发版应用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/15.png" alt="创建应用"></p>
-<p>接下来我们配置一下我们的leancloud。点击设置 -&gt; 安全中心 -&gt; Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/16.png" alt="安全域名"></p>
-<p>接下来点击应用keys获取你的appid和appkey。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/17.png" alt="app keys"></p>
-<h3 id="2-在next主题中配置valine"><a href="#2-在next主题中配置valine" class="headerlink" title="2. 在next主题中配置valine"></a>2. 在next主题中配置valine</h3><p>打开 _config.next.yml，找到comments栏目并开启valine：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">active:</span> <span class="string">valine</span></span><br></pre></td></tr></table></figure>
-
-<p>往下滑动进入valine设置栏，开启valine并填入你的appid和appkey：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span>  <span class="comment"># Your leancloud application appid</span></span><br><span class="line">  <span class="attr">appKey:</span>  <span class="comment"># Your leancloud application appkey</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">&quot;输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像！\n填写了email可以收到推送通知哦！&quot;</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="attr">meta:</span> [<span class="string">nick</span>, <span class="string">mail</span>]</span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">lang:</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">serverURLs:</span></span><br><span class="line">  <span class="attr">enableQQ:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">requiredFields:</span> [<span class="string">nick</span>]</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-在菜单栏添加留言板"><a href="#3-在菜单栏添加留言板" class="headerlink" title="3. 在菜单栏添加留言板"></a>3. 在菜单栏添加留言板</h3><p>添加一个新的page：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo new page guestbook</span><br></pre></td></tr></table></figure>
-
-<p>进入 source&#x2F;guestbook&#x2F;index.md，加入你想显示的内容。图标支持font awesome，可以按自己喜好修改。</p>
-<h3 id="4-重新生成页面即可"><a href="#4-重新生成页面即可" class="headerlink" title="4. 重新生成页面即可"></a>4. 重新生成页面即可</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>valine比较简洁、配置简单且免费，非常推荐作为个人博客的评论系统来使用。</p>
+<h2 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h2><h3 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h3><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
+<p>提取码：j0zd</p>
+<blockquote>
+<p>注意：每次启动游戏都要经过以下的步骤进入线上模式！</p>
+</blockquote>
+<h3 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h3><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是64位）。</p>
+<h3 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h3><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png" alt="GTA5"></p>
+<h3 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h3><ul>
+<li>点击Process，找到GTA5.exe</li>
+<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
+<li>点击Inject</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png" alt="Xenos"></p>
+<h3 id="5-点击进入GTA-Online"><a href="#5-点击进入GTA-Online" class="headerlink" title="5. 点击进入GTA Online"></a>5. 点击进入GTA Online</h3><p>Enjoy! 本人实测加载速度大幅提升！！</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></li>
+<li><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></li>
+<li><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></li>
+<li><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></li>
 </ul>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>游戏</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>杂谈</tag>
+        <tag>GTA5</tag>
       </tags>
   </entry>
   <entry>
@@ -397,30 +356,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-        <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>欢迎来到我的博客</title>
-    <url>//welcome/</url>
-    <content><![CDATA[<h2 id="Vince的博客终于开通了！"><a href="#Vince的博客终于开通了！" class="headerlink" title="Vince的博客终于开通了！"></a>Vince的博客终于开通了！</h2><p>经过了一天的摸索和实践，加上踩了无数的坑，终于通过 Hexo 加 Github成功实现了自己的博客！这个域名很早就买了，当时想的是用自己搬瓦工的服务器自己搭建，但是一直没时间去学习，加上本人对前端知识可谓是一窍不通就一直搁置了。前几天在网上看到有大佬分享自己搭博客的经验，自己瞬间来了兴趣故搭建了本站。</p>
-<span id="more"></span>
-
-<h2 id="本站用途"><a href="#本站用途" class="headerlink" title="本站用途"></a>本站用途</h2><p>本站主要用来记录本人学习过程中的各种点滴以及网络上自己觉得有用的文章，希望大家可以一起学习，相互勉励！</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/35668237">超详细Hexo+Github博客搭建小白教程 - 知乎</a></li>
-<li><a href="https://juejin.im/post/6844903679858851853">hexo搭建个人网站博客完全教程 - 掘金</a></li>
-<li><a href="https://valine.js.org/">介绍 | Valine</a></li>
-<li><a href="https://www.leancloud.cn/">LeanCloud</a></li>
-</ul>
-<p>-Vince 于 2020&#x2F;09&#x2F;06 at San Diego, CA</p>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
         <tag>杂谈</tag>
       </tags>
   </entry>
@@ -594,6 +529,71 @@
       <tags>
         <tag>排序</tag>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo + next8.0开启Valine评论系统及添加留言板功能</title>
+    <url>//hexo_4/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经过前三轮的折腾，你已经拥有一个自己定义的静态页面了，是时候给它添加一个留言板功能了。next主题自带了多种留言功能的插件，比如畅言，disqus，disqusjs，gitalk，livere，valine。 valine是其中相对简洁并且限制较少的一款轻量型博客评论系统。本文将教你如何开启并美化valine评论系统。如果你还没有配置你自己的博客，可以参考我的<a href="https://haomingzhang.com/tags/Hexo/">前几篇文章</a>。</p>
+<span id="more"></span>
+
+<h2 id="开启valine评论系统"><a href="#开启valine评论系统" class="headerlink" title="开启valine评论系统"></a>开启valine评论系统</h2><h3 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a>1. 注册 Leancloud 账号</h3><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/14.png" alt="leancloud注册"></p>
+<p>注册完成后进入app控制面板 -&gt; 创建应用 -&gt; 创建开发版应用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/15.png" alt="创建应用"></p>
+<p>接下来我们配置一下我们的leancloud。点击设置 -&gt; 安全中心 -&gt; Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/16.png" alt="安全域名"></p>
+<p>接下来点击应用keys获取你的appid和appkey。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/17.png" alt="app keys"></p>
+<h3 id="2-在next主题中配置valine"><a href="#2-在next主题中配置valine" class="headerlink" title="2. 在next主题中配置valine"></a>2. 在next主题中配置valine</h3><p>打开 _config.next.yml，找到comments栏目并开启valine：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">active:</span> <span class="string">valine</span></span><br></pre></td></tr></table></figure>
+
+<p>往下滑动进入valine设置栏，开启valine并填入你的appid和appkey：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span>  <span class="comment"># Your leancloud application appid</span></span><br><span class="line">  <span class="attr">appKey:</span>  <span class="comment"># Your leancloud application appkey</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">&quot;输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像！\n填写了email可以收到推送通知哦！&quot;</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="attr">meta:</span> [<span class="string">nick</span>, <span class="string">mail</span>]</span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">lang:</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">serverURLs:</span></span><br><span class="line">  <span class="attr">enableQQ:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">requiredFields:</span> [<span class="string">nick</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-在菜单栏添加留言板"><a href="#3-在菜单栏添加留言板" class="headerlink" title="3. 在菜单栏添加留言板"></a>3. 在菜单栏添加留言板</h3><p>添加一个新的page：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo new page guestbook</span><br></pre></td></tr></table></figure>
+
+<p>进入 source&#x2F;guestbook&#x2F;index.md，加入你想显示的内容。图标支持font awesome，可以按自己喜好修改。</p>
+<h3 id="4-重新生成页面即可"><a href="#4-重新生成页面即可" class="headerlink" title="4. 重新生成页面即可"></a>4. 重新生成页面即可</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>valine比较简洁、配置简单且免费，非常推荐作为个人博客的评论系统来使用。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>欢迎来到我的博客</title>
+    <url>//welcome/</url>
+    <content><![CDATA[<h2 id="Vince的博客终于开通了！"><a href="#Vince的博客终于开通了！" class="headerlink" title="Vince的博客终于开通了！"></a>Vince的博客终于开通了！</h2><p>经过了一天的摸索和实践，加上踩了无数的坑，终于通过 Hexo 加 Github成功实现了自己的博客！这个域名很早就买了，当时想的是用自己搬瓦工的服务器自己搭建，但是一直没时间去学习，加上本人对前端知识可谓是一窍不通就一直搁置了。前几天在网上看到有大佬分享自己搭博客的经验，自己瞬间来了兴趣故搭建了本站。</p>
+<span id="more"></span>
+
+<h2 id="本站用途"><a href="#本站用途" class="headerlink" title="本站用途"></a>本站用途</h2><p>本站主要用来记录本人学习过程中的各种点滴以及网络上自己觉得有用的文章，希望大家可以一起学习，相互勉励！</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/35668237">超详细Hexo+Github博客搭建小白教程 - 知乎</a></li>
+<li><a href="https://juejin.im/post/6844903679858851853">hexo搭建个人网站博客完全教程 - 掘金</a></li>
+<li><a href="https://valine.js.org/">介绍 | Valine</a></li>
+<li><a href="https://www.leancloud.cn/">LeanCloud</a></li>
+</ul>
+<p>-Vince 于 2020&#x2F;09&#x2F;06 at San Diego, CA</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
       </tags>
   </entry>
 </search>
