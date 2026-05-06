@@ -20,6 +20,24 @@
   </url>
   
   <url>
+    <loc>https://haomingzhang.com/hexo_3/</loc>
+    
+    <lastmod>2026-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://haomingzhang.com/hexo_1/</loc>
+    
+    <lastmod>2026-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://haomingzhang.com/gta_boost/</loc>
     
     <lastmod>2026-05-05</lastmod>
@@ -47,24 +65,6 @@
   </url>
   
   <url>
-    <loc>https://haomingzhang.com/welcome/</loc>
-    
-    <lastmod>2026-05-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://haomingzhang.com/hexo_3/</loc>
-    
-    <lastmod>2026-05-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://haomingzhang.com/hexo_2/</loc>
     
     <lastmod>2026-05-05</lastmod>
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://haomingzhang.com/hexo_1/</loc>
+    <loc>https://haomingzhang.com/welcome/</loc>
     
     <lastmod>2026-05-05</lastmod>
     
@@ -90,13 +90,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://haomingzhang.com/tags/GTA5/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://haomingzhang.com/tags/Hexo/</loc>
@@ -120,6 +113,13 @@
   </url>
   
   <url>
+    <loc>https://haomingzhang.com/tags/GTA5/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://haomingzhang.com/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -136,14 +136,14 @@
 
   
   <url>
-    <loc>https://haomingzhang.com/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://haomingzhang.com/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://haomingzhang.com/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://haomingzhang.com/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

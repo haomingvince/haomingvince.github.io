@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>GTA5在线模式加载速度加速(大幅提升)</title>
-    <url>//gta_boost/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
-<p><strong>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</strong></p>
-<span id="more"></span>
-
-<h2 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h2><h3 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h3><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
-<p>提取码：j0zd</p>
-<blockquote>
-<p>注意：每次启动游戏都要经过以下的步骤进入线上模式！</p>
-</blockquote>
-<h3 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h3><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是64位）。</p>
-<h3 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h3><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png" alt="GTA5"></p>
-<h3 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h3><ul>
-<li>点击Process，找到GTA5.exe</li>
-<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
-<li>点击Inject</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png" alt="Xenos"></p>
-<h3 id="5-点击进入GTA-Online"><a href="#5-点击进入GTA-Online" class="headerlink" title="5. 点击进入GTA Online"></a>5. 点击进入GTA Online</h3><p>Enjoy! 本人实测加载速度大幅提升！！</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></li>
-<li><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></li>
-<li><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>GTA5</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Gitalk 国内加速：用 Cloudflare Worker 自建 OAuth 代理</title>
     <url>/gitalk-cors-proxy/</url>
     <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>博客迁移到 Gitalk 后设置一切正常，但国内用户打开文章页面时评论区域完全空白。浏览器 F12 Console 显示 Gitalk 依赖的 OAuth 代理 <code>cors-anywhere.azm.workers.dev</code> 请求 403。</p>
@@ -69,6 +31,46 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Gitalk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为hexo next8.0主题添加一个可以切换的黑色/夜间模式</title>
+    <url>//hexo_3/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑&#x2F;白模式。如果你还没有自己的博客，可以参考我的前两篇文章：<a href="https://haomingzhang.com/hexo_1/">hexo基本安装及配置</a>，<a href="https://haomingzhang.com/hexo_2/">hexo主题安装以及next8.0主题美化</a>。</p>
+<span id="more"></span>
+
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="1-添加darkmode-js到你的next主题中"><a href="#1-添加darkmode-js到你的next主题中" class="headerlink" title="1. 添加darkmode.js到你的next主题中"></a>1. 添加darkmode.js到你的next主题中</h3><p>你可以下载 <a href="https://github.com/sandoche/Darkmode.js">Darkmode.js</a> 或者直接添加他的cdn到你的vendors文件。</p>
+<p>我的方法是直接在 themes&#x2F;next&#x2F;_vendors.yml 中添加 darkmode的 cdn：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">darkmode-js</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">1.5</span><span class="number">.7</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">lib/darkmode-js.min.js</span></span><br></pre></td></tr></table></figure>
+
+<p>直接加在文件末尾即可。</p>
+<h3 id="2-在你的-config-next-yml-添加darkmode-js的相关开关："><a href="#2-在你的-config-next-yml-添加darkmode-js的相关开关：" class="headerlink" title="2. 在你的 _config.next.yml 添加darkmode_js的相关开关："></a>2. 在你的 _config.next.yml 添加darkmode_js的相关开关：</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="attr">darkmode_js:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>注意缩进！第一个darkmode_js是在vendors栏目下，第二个darkmode_js是一个单独的栏目。</p>
+<h3 id="3-开启darkmode-js"><a href="#3-开启darkmode-js" class="headerlink" title="3. 开启darkmode_js"></a>3. 开启darkmode_js</h3><p>打开 themes&#x2F;next&#x2F;layout&#x2F;_scripts&#x2F;vendors.njk，配置以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if theme.canvas_ribbon.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.canvas_ribbon &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Declaration #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.darkmode_js &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- for name in js_vendors() %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; url_for(theme.vendors[name]) &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endfor %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Invokation #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var options = &#123;</span><br><span class="line">  bottom: &#x27;64px&#x27;,</span><br><span class="line">  right: &#x27;unset&#x27;,</span><br><span class="line">  left: &#x27;32px&#x27;,</span><br><span class="line">  time: &#x27;0.5s&#x27;,</span><br><span class="line">  mixColor: &#x27;#fff&#x27;,</span><br><span class="line">  backgroundColor: &#x27;#fff&#x27;,</span><br><span class="line">  buttonColorDark: &#x27;#100f2c&#x27;,</span><br><span class="line">  buttonColorLight: &#x27;#fff&#x27;,</span><br><span class="line">  saveInCookies: true,</span><br><span class="line">  label: &#x27;🌓&#x27;,</span><br><span class="line">  autoMatchOsTheme: true</span><br><span class="line">&#125;</span><br><span class="line">const darkmode = new Darkmode(options);</span><br><span class="line">darkmode.showWidget();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为此版本的动画特效已经精简为只有canvas_ribbon，更改后的配置文件就如上所示。</p>
+<h3 id="4-重新生成即可开启"><a href="#4-重新生成即可开启" class="headerlink" title="4. 重新生成即可开启"></a>4. 重新生成即可开启</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>因为next团队在8.0版本更改了比较多的代码，网上既有的教程并不适用于8.0版本，如果有这个按钮需要的话，可以按照本文配置哦！</p>
+<p>最后效果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif" alt="darkmode效果"></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></li>
+<li><a href="https://github.com/sandoche/Darkmode.js">sandoche&#x2F;Darkmode.js</a></li>
+<li><a href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
@@ -166,6 +168,126 @@
       <tags>
         <tag>Hexo</tag>
         <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo基本安装及配置</title>
+    <url>//hexo_1/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经过了快一星期的折腾，我的博客的各项功能也在陆续开通中，本文就来记录一下hexo + github pages心路历程及配置方法。</p>
+<span id="more"></span>
+
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h3><ol>
+<li>github账号</li>
+<li>git(本地)</li>
+<li>node.js</li>
+<li>npm</li>
+<li>个人域名(可选)</li>
+</ol>
+<h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><h4 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h4><p>这里xxx填写你的github账户名称。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/1.png" alt="github注册"><br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/2.png" alt="github注册"></p>
+<h4 id="创建一个新的仓库"><a href="#创建一个新的仓库" class="headerlink" title="创建一个新的仓库"></a>创建一个新的仓库</h4><p>命名为 xxx.github.io</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/3.png" alt="创建仓库"><br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/4.png" alt="创建仓库"></p>
+<h4 id="电脑上安装-git"><a href="#电脑上安装-git" class="headerlink" title="电脑上安装 git"></a>电脑上安装 git</h4><p>记得添加右键选单和加入PATH。具体git配置教程可以参考 [Git &amp; GitHub] Windows安装git和环境变量配置</p>
+<h4 id="电脑上安装-node-js"><a href="#电脑上安装-node-js" class="headerlink" title="电脑上安装 node.js"></a>电脑上安装 node.js</h4><p>记得加入PATH。此版本node.js集成了npm，可以在命令行中输入 <code>node -v</code> 以及 <code>npm -v</code> 检查是否安装成功。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/5.png" alt="node检查"></p>
+<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>使用命令行工具(cd xxxx) 进入你的博客文件夹，依次输入以下指令：</p>
+<p>安装hexo和hexo服务器模块：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+
+<p>初始化博客：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+
+<p>测试hexo是否安装成功：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="built_in">test</span></span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>hexo new test</code> 表示新建一篇名为test的博文，<code>hexo g</code> 表示生成，是 <code>hexo generate</code> 的简写，<code>hexo s</code> 在本地运行hexo服务器，是 <code>hexo server</code> 的简写。</p>
+<p>成功后会有如下提示，进入 <a href="http://localhost:4000/">http://localhost:4000</a> 即可看到刚刚生成的网页。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/6.png" alt="hexo成功"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/7.png" alt="hexo页面"></p>
+<h4 id="配置到github-pages"><a href="#配置到github-pages" class="headerlink" title="配置到github pages"></a>配置到github pages</h4><p>之前的操作只是在本地实现了我们的博客，如何推送到github pages呢？</p>
+<p>首先，打开博客目录下的 _config.yml 文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png" alt="config"></p>
+<p>使用 ctrl+f 搜索deploy，并添加以下代码。注意！把xxx改为之前在github配置的名字即可。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/xxx/xxx.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来，安装hexo-deployer-git：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>接下来就可以推送我们的网页到github啦！</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>hexo d</code> 表示deploy，是 <code>hexo deploy</code> 的简写。</p>
+<h4 id="访问网页"><a href="#访问网页" class="headerlink" title="访问网页"></a>访问网页</h4><p>如果之前的步骤都是正确的话，那么恭喜你！你已经可以访问你的网页了！</p>
+<p>比如我的网页： <a href="https://haomingvince.github.io/">https://haomingvince.github.io</a></p>
+<p>把haomingvince改成你的github用户名即可</p>
+<h4 id="绑定你自己的域名（可选）"><a href="#绑定你自己的域名（可选）" class="headerlink" title="绑定你自己的域名（可选）"></a>绑定你自己的域名（可选）</h4><p>如果你已经拥有你自己的域名的话那是最好。由于我的域名是在godaddy购买的，接下来我会演示如何绑定你的github pages到godaddy。</p>
+<p>登录你的godaddy后台，点击manage DNS</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/9.png" alt="DNS"></p>
+<p>添加两条记录，一条CNAME，一条A记录：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/10.png" alt="DNS records"></p>
+<p>其中CNAME的value就填写你的github page的值，A的value可以通过 ping xxx.github.io 得到。</p>
+<p>接下来，去到你的github page的settings界面，在 Options -&gt; Github pages -&gt; custom domain 添加你的域名：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/11.png" alt="custom domain"></p>
+<p>最后一步，在你本地 &#x2F;source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），里面添加你的域名即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/12.png" alt="CNAME"></p>
+<p>再次执行deploy：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>稍等几分钟，你就可以用自己的域名访问你的网站啦！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/13.png" alt="final"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本文介绍了基本的hexo + github page的部署及实现，如果有任何问题，欢迎留言！</p>
+<h2 id="Upcoming-Next"><a href="#Upcoming-Next" class="headerlink" title="Upcoming Next"></a>Upcoming Next</h2><p>Next 8.0 主题配置 （<a href="https://haomingzhang.com/hexo_2/">已更新</a>）</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://haomingzhang.com/">Vince’s Blog</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GTA5在线模式加载速度加速(大幅提升)</title>
+    <url>//gta_boost/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
+<p><strong>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</strong></p>
+<span id="more"></span>
+
+<h2 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h2><h3 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h3><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
+<p>提取码：j0zd</p>
+<blockquote>
+<p>注意：每次启动游戏都要经过以下的步骤进入线上模式！</p>
+</blockquote>
+<h3 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h3><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是64位）。</p>
+<h3 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h3><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png" alt="GTA5"></p>
+<h3 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h3><ul>
+<li>点击Process，找到GTA5.exe</li>
+<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
+<li>点击Inject</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png" alt="Xenos"></p>
+<h3 id="5-点击进入GTA-Online"><a href="#5-点击进入GTA-Online" class="headerlink" title="5. 点击进入GTA Online"></a>5. 点击进入GTA Online</h3><p>Enjoy! 本人实测加载速度大幅提升！！</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></li>
+<li><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></li>
+<li><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>GTA5</tag>
       </tags>
   </entry>
   <entry>
@@ -382,70 +504,6 @@
       </tags>
   </entry>
   <entry>
-    <title>欢迎来到我的博客</title>
-    <url>//welcome/</url>
-    <content><![CDATA[<h2 id="Vince的博客终于开通了！"><a href="#Vince的博客终于开通了！" class="headerlink" title="Vince的博客终于开通了！"></a>Vince的博客终于开通了！</h2><p>经过了一天的摸索和实践，加上踩了无数的坑，终于通过 Hexo 加 Github成功实现了自己的博客！这个域名很早就买了，当时想的是用自己搬瓦工的服务器自己搭建，但是一直没时间去学习，加上本人对前端知识可谓是一窍不通就一直搁置了。前几天在网上看到有大佬分享自己搭博客的经验，自己瞬间来了兴趣故搭建了本站。</p>
-<span id="more"></span>
-
-<h2 id="本站用途"><a href="#本站用途" class="headerlink" title="本站用途"></a>本站用途</h2><p>本站主要用来记录本人学习过程中的各种点滴以及网络上自己觉得有用的文章，希望大家可以一起学习，相互勉励！</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/35668237">超详细Hexo+Github博客搭建小白教程 - 知乎</a></li>
-<li><a href="https://juejin.im/post/6844903679858851853">hexo搭建个人网站博客完全教程 - 掘金</a></li>
-<li><a href="https://valine.js.org/">介绍 | Valine</a></li>
-<li><a href="https://www.leancloud.cn/">LeanCloud</a></li>
-</ul>
-<p>-Vince 于 2020&#x2F;09&#x2F;06 at San Diego, CA</p>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为hexo next8.0主题添加一个可以切换的黑色/夜间模式</title>
-    <url>//hexo_3/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然next 8.0 主题已经支持原生黑色模式，只需要在 _config.next.yml 文件中，将相应开关打开即可：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>但是这个黑色模式是不可以切换的，本文将介绍如何实现一个按钮来切换黑&#x2F;白模式。如果你还没有自己的博客，可以参考我的前两篇文章：<a href="https://haomingzhang.com/hexo_1/">hexo基本安装及配置</a>，<a href="https://haomingzhang.com/hexo_2/">hexo主题安装以及next8.0主题美化</a>。</p>
-<span id="more"></span>
-
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="1-添加darkmode-js到你的next主题中"><a href="#1-添加darkmode-js到你的next主题中" class="headerlink" title="1. 添加darkmode.js到你的next主题中"></a>1. 添加darkmode.js到你的next主题中</h3><p>你可以下载 <a href="https://github.com/sandoche/Darkmode.js">Darkmode.js</a> 或者直接添加他的cdn到你的vendors文件。</p>
-<p>我的方法是直接在 themes&#x2F;next&#x2F;_vendors.yml 中添加 darkmode的 cdn：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">darkmode-js</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">1.5</span><span class="number">.7</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">lib/darkmode-js.min.js</span></span><br></pre></td></tr></table></figure>
-
-<p>直接加在文件末尾即可。</p>
-<h3 id="2-在你的-config-next-yml-添加darkmode-js的相关开关："><a href="#2-在你的-config-next-yml-添加darkmode-js的相关开关：" class="headerlink" title="2. 在你的 _config.next.yml 添加darkmode_js的相关开关："></a>2. 在你的 _config.next.yml 添加darkmode_js的相关开关：</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="attr">darkmode_js:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>注意缩进！第一个darkmode_js是在vendors栏目下，第二个darkmode_js是一个单独的栏目。</p>
-<h3 id="3-开启darkmode-js"><a href="#3-开启darkmode-js" class="headerlink" title="3. 开启darkmode_js"></a>3. 开启darkmode_js</h3><p>打开 themes&#x2F;next&#x2F;layout&#x2F;_scripts&#x2F;vendors.njk，配置以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if theme.canvas_ribbon.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.canvas_ribbon &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Declaration #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; theme.vendors.darkmode_js &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- for name in js_vendors() %&#125;</span><br><span class="line">  &lt;script src=&quot;&#123;&#123; url_for(theme.vendors[name]) &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;%- endfor %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# Customize darkmode.js - Invokation #&#125;</span><br><span class="line">&#123;%- if theme.darkmode_js.enable %&#125;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var options = &#123;</span><br><span class="line">  bottom: &#x27;64px&#x27;,</span><br><span class="line">  right: &#x27;unset&#x27;,</span><br><span class="line">  left: &#x27;32px&#x27;,</span><br><span class="line">  time: &#x27;0.5s&#x27;,</span><br><span class="line">  mixColor: &#x27;#fff&#x27;,</span><br><span class="line">  backgroundColor: &#x27;#fff&#x27;,</span><br><span class="line">  buttonColorDark: &#x27;#100f2c&#x27;,</span><br><span class="line">  buttonColorLight: &#x27;#fff&#x27;,</span><br><span class="line">  saveInCookies: true,</span><br><span class="line">  label: &#x27;🌓&#x27;,</span><br><span class="line">  autoMatchOsTheme: true</span><br><span class="line">&#125;</span><br><span class="line">const darkmode = new Darkmode(options);</span><br><span class="line">darkmode.showWidget();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>因为此版本的动画特效已经精简为只有canvas_ribbon，更改后的配置文件就如上所示。</p>
-<h3 id="4-重新生成即可开启"><a href="#4-重新生成即可开启" class="headerlink" title="4. 重新生成即可开启"></a>4. 重新生成即可开启</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>因为next团队在8.0版本更改了比较多的代码，网上既有的教程并不适用于8.0版本，如果有这个按钮需要的话，可以按照本文配置哦！</p>
-<p>最后效果：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/darkmode.gif" alt="darkmode效果"></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/haomingvince/hexo-haomingvince/">我的页面设置</a></li>
-<li><a href="https://github.com/sandoche/Darkmode.js">sandoche&#x2F;Darkmode.js</a></li>
-<li><a href="https://dog.wtf/tech/hexo-dark-mode-note/">Hexo（Next 主题）实现可切换的 Dark Mode</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo主题安装以及next8.0主题美化</title>
     <url>//hexo_2/</url>
     <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
@@ -515,84 +573,26 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo基本安装及配置</title>
-    <url>//hexo_1/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经过了快一星期的折腾，我的博客的各项功能也在陆续开通中，本文就来记录一下hexo + github pages心路历程及配置方法。</p>
+    <title>欢迎来到我的博客</title>
+    <url>//welcome/</url>
+    <content><![CDATA[<h2 id="Vince的博客终于开通了！"><a href="#Vince的博客终于开通了！" class="headerlink" title="Vince的博客终于开通了！"></a>Vince的博客终于开通了！</h2><p>经过了一天的摸索和实践，加上踩了无数的坑，终于通过 Hexo 加 Github成功实现了自己的博客！这个域名很早就买了，当时想的是用自己搬瓦工的服务器自己搭建，但是一直没时间去学习，加上本人对前端知识可谓是一窍不通就一直搁置了。前几天在网上看到有大佬分享自己搭博客的经验，自己瞬间来了兴趣故搭建了本站。</p>
 <span id="more"></span>
 
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h3><ol>
-<li>github账号</li>
-<li>git(本地)</li>
-<li>node.js</li>
-<li>npm</li>
-<li>个人域名(可选)</li>
-</ol>
-<h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><h4 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h4><p>这里xxx填写你的github账户名称。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/1.png" alt="github注册"><br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/2.png" alt="github注册"></p>
-<h4 id="创建一个新的仓库"><a href="#创建一个新的仓库" class="headerlink" title="创建一个新的仓库"></a>创建一个新的仓库</h4><p>命名为 xxx.github.io</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/3.png" alt="创建仓库"><br><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/4.png" alt="创建仓库"></p>
-<h4 id="电脑上安装-git"><a href="#电脑上安装-git" class="headerlink" title="电脑上安装 git"></a>电脑上安装 git</h4><p>记得添加右键选单和加入PATH。具体git配置教程可以参考 [Git &amp; GitHub] Windows安装git和环境变量配置</p>
-<h4 id="电脑上安装-node-js"><a href="#电脑上安装-node-js" class="headerlink" title="电脑上安装 node.js"></a>电脑上安装 node.js</h4><p>记得加入PATH。此版本node.js集成了npm，可以在命令行中输入 <code>node -v</code> 以及 <code>npm -v</code> 检查是否安装成功。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/5.png" alt="node检查"></p>
-<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>使用命令行工具(cd xxxx) 进入你的博客文件夹，依次输入以下指令：</p>
-<p>安装hexo和hexo服务器模块：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-
-<p>初始化博客：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
-
-<p>测试hexo是否安装成功：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="built_in">test</span></span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p>其中 <code>hexo new test</code> 表示新建一篇名为test的博文，<code>hexo g</code> 表示生成，是 <code>hexo generate</code> 的简写，<code>hexo s</code> 在本地运行hexo服务器，是 <code>hexo server</code> 的简写。</p>
-<p>成功后会有如下提示，进入 <a href="http://localhost:4000/">http://localhost:4000</a> 即可看到刚刚生成的网页。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/6.png" alt="hexo成功"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/7.png" alt="hexo页面"></p>
-<h4 id="配置到github-pages"><a href="#配置到github-pages" class="headerlink" title="配置到github pages"></a>配置到github pages</h4><p>之前的操作只是在本地实现了我们的博客，如何推送到github pages呢？</p>
-<p>首先，打开博客目录下的 _config.yml 文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/8.png" alt="config"></p>
-<p>使用 ctrl+f 搜索deploy，并添加以下代码。注意！把xxx改为之前在github配置的名字即可。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/xxx/xxx.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<p>接下来，安装hexo-deployer-git：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>接下来就可以推送我们的网页到github啦！</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>其中 <code>hexo d</code> 表示deploy，是 <code>hexo deploy</code> 的简写。</p>
-<h4 id="访问网页"><a href="#访问网页" class="headerlink" title="访问网页"></a>访问网页</h4><p>如果之前的步骤都是正确的话，那么恭喜你！你已经可以访问你的网页了！</p>
-<p>比如我的网页： <a href="https://haomingvince.github.io/">https://haomingvince.github.io</a></p>
-<p>把haomingvince改成你的github用户名即可</p>
-<h4 id="绑定你自己的域名（可选）"><a href="#绑定你自己的域名（可选）" class="headerlink" title="绑定你自己的域名（可选）"></a>绑定你自己的域名（可选）</h4><p>如果你已经拥有你自己的域名的话那是最好。由于我的域名是在godaddy购买的，接下来我会演示如何绑定你的github pages到godaddy。</p>
-<p>登录你的godaddy后台，点击manage DNS</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/9.png" alt="DNS"></p>
-<p>添加两条记录，一条CNAME，一条A记录：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/10.png" alt="DNS records"></p>
-<p>其中CNAME的value就填写你的github page的值，A的value可以通过 ping xxx.github.io 得到。</p>
-<p>接下来，去到你的github page的settings界面，在 Options -&gt; Github pages -&gt; custom domain 添加你的域名：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/11.png" alt="custom domain"></p>
-<p>最后一步，在你本地 &#x2F;source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），里面添加你的域名即可。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/12.png" alt="CNAME"></p>
-<p>再次执行deploy：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>稍等几分钟，你就可以用自己的域名访问你的网站啦！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/hexo_pic/13.png" alt="final"></p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本文介绍了基本的hexo + github page的部署及实现，如果有任何问题，欢迎留言！</p>
-<h2 id="Upcoming-Next"><a href="#Upcoming-Next" class="headerlink" title="Upcoming Next"></a>Upcoming Next</h2><p>Next 8.0 主题配置 （<a href="https://haomingzhang.com/hexo_2/">已更新</a>）</p>
+<h2 id="本站用途"><a href="#本站用途" class="headerlink" title="本站用途"></a>本站用途</h2><p>本站主要用来记录本人学习过程中的各种点滴以及网络上自己觉得有用的文章，希望大家可以一起学习，相互勉励！</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://haomingzhang.com/">Vince’s Blog</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/35668237">超详细Hexo+Github博客搭建小白教程 - 知乎</a></li>
+<li><a href="https://juejin.im/post/6844903679858851853">hexo搭建个人网站博客完全教程 - 掘金</a></li>
+<li><a href="https://valine.js.org/">介绍 | Valine</a></li>
+<li><a href="https://www.leancloud.cn/">LeanCloud</a></li>
 </ul>
+<p>-Vince 于 2020&#x2F;09&#x2F;06 at San Diego, CA</p>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>记录</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>杂谈</tag>
       </tags>
   </entry>
