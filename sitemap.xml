@@ -20,6 +20,15 @@
   </url>
   
   <url>
+    <loc>https://haomingzhang.com/gta_boost/</loc>
+    
+    <lastmod>2026-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://haomingzhang.com/hexo_1/</loc>
     
     <lastmod>2026-05-05</lastmod>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>https://haomingzhang.com/hexo_3/</loc>
-    
-    <lastmod>2026-05-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://haomingzhang.com/gta_boost/</loc>
     
     <lastmod>2026-05-05</lastmod>
     
@@ -106,14 +106,14 @@
   </url>
   
   <url>
-    <loc>https://haomingzhang.com/tags/%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://haomingzhang.com/tags/GTA5/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://haomingzhang.com/tags/GTA5/</loc>
+    <loc>https://haomingzhang.com/tags/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

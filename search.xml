@@ -34,6 +34,44 @@
       </tags>
   </entry>
   <entry>
+    <title>GTA5在线模式加载速度加速(大幅提升)</title>
+    <url>//gta_boost/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
+<p><strong>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</strong></p>
+<span id="more"></span>
+
+<h2 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h2><h3 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h3><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
+<p>提取码：j0zd</p>
+<blockquote>
+<p>注意：每次启动游戏都要经过以下的步骤进入线上模式！</p>
+</blockquote>
+<h3 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h3><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是64位）。</p>
+<h3 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h3><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png" alt="GTA5"></p>
+<h3 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h3><ul>
+<li>点击Process，找到GTA5.exe</li>
+<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
+<li>点击Inject</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png" alt="Xenos"></p>
+<h3 id="5-点击进入GTA-Online"><a href="#5-点击进入GTA-Online" class="headerlink" title="5. 点击进入GTA Online"></a>5. 点击进入GTA Online</h3><p>Enjoy! 本人实测加载速度大幅提升！！</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></li>
+<li><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></li>
+<li><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>GTA5</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo基本安装及配置</title>
     <url>//hexo_1/</url>
     <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
@@ -250,44 +288,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GTA5在线模式加载速度加速(大幅提升)</title>
-    <url>//gta_boost/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">可以通过右边的文章目录快速跳转哦！</blockquote>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GTA5在线模式的加载速度一直为人诟病，最近在网上看到国外的大神(tostercx)反工程了GTA5的代码，发现在加载线上模式时调用了很多重复的if-else导致加载速度极慢。本文总结了该大神的加速方法。本文只是总结收纳，所有权还是归大神所有！</p>
-<p><strong>注意：此方法会使用到DLL注入，不保证R*不会封禁，Use it under your own risk!</strong></p>
-<span id="more"></span>
-
-<h2 id="具体注入方法"><a href="#具体注入方法" class="headerlink" title="具体注入方法"></a>具体注入方法</h2><h3 id="1-下载我的总结包"><a href="#1-下载我的总结包" class="headerlink" title="1. 下载我的总结包"></a>1. 下载我的总结包</h3><p>链接：<a href="https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg">https://pan.baidu.com/s/1hGblePtpb9cOQJs153rOmg</a></p>
-<p>提取码：j0zd</p>
-<blockquote>
-<p>注意：每次启动游戏都要经过以下的步骤进入线上模式！</p>
-</blockquote>
-<h3 id="2-打开Xenos"><a href="#2-打开Xenos" class="headerlink" title="2. 打开Xenos"></a>2. 打开Xenos</h3><p>文件夹中有两个版本，根据自己的系统来选择，64位选择Xenos64.exe，32位选择Xenos.exe。如果你不知道你的系统是64还是32位，可以百度查询（现在一般都是64位）。</p>
-<h3 id="3-打开GTA5"><a href="#3-打开GTA5" class="headerlink" title="3. 打开GTA5"></a>3. 打开GTA5</h3><p>此时我们不选择进入GTA Online，先进入线下模式。等待游戏加载进入主菜单后，进行下一步操作。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/1.png" alt="GTA5"></p>
-<h3 id="4-在Xenos中操作"><a href="#4-在Xenos中操作" class="headerlink" title="4. 在Xenos中操作"></a>4. 在Xenos中操作</h3><ul>
-<li>点击Process，找到GTA5.exe</li>
-<li>在下方点击add，找到总结包中的 Universal.GTAO_Booster.dll</li>
-<li>点击Inject</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/haomingvince/ghcdn@master/GTAO_Boost/3.png" alt="Xenos"></p>
-<h3 id="5-点击进入GTA-Online"><a href="#5-点击进入GTA-Online" class="headerlink" title="5. 点击进入GTA Online"></a>5. 点击进入GTA Online</h3><p>Enjoy! 本人实测加载速度大幅提升！！</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>感谢大神的无私奉献。本文只是总结，有任何问题欢迎去大神的github issue提出~</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/tostercx/GTAO_Booster_PoC">GTAO_Booster_PoC</a></li>
-<li><a href="https://github.com/QuickNET-Tech/GTAO_Booster_PoC/releases/tag/v1.0.1">GTAO_Booster_PoC_Release</a></li>
-<li><a href="https://github.com/tostercx/GTAO_Booster_PoC/issues/21">Tutorial</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>GTA5</tag>
       </tags>
   </entry>
   <entry>
